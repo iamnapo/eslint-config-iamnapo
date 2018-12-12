@@ -1,0 +1,49 @@
+{
+  "name": "eslint-config-iamnapo",
+  "version": "0.1.0",
+  "description": "ESLint shareable config for iamnapo's coding style",
+  "homepage": "https://github.com/iamnapo/eslint-config-iamnapo#readme",
+  "bugs": {
+    "url": "https://github.com/iamnapo/eslint-config-iamnapo/issues"
+  },
+  "repository": "github:iamnapo/eslint-config-iamnapo",
+  "license": "MIT",
+  "author": {
+    "name": "Napoleon Oikonomou",
+    "email": "Napoleonoikon@gmail.com",
+    "url": "https://iamnapo.me"
+  },
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --config=.eslintrc.json",
+    "test": "npm run lint && tape test/*.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.10.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "tape": "^4.9.1"
+  },
+  "peerDependencies": {
+    "eslint": ">=5.10.0"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "keywords ": [
+    "eslint",
+    "eslintrc",
+    "eslintconfig",
+    "config",
+    "iamnapo",
+    "styleguide",
+    "react"
+  ]
+}
