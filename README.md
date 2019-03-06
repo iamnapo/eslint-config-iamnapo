@@ -2,7 +2,7 @@
 
 > ESLint shareable config for [iamnapo](https://iamnapo.me)'s coding style
 
-[![Travis](https://flat.badgen.net/travis/iamnapo/eslint-config-iamnapo?icon=travis&label=Travis+CI)](https://travis-ci.com/iamnapo/eslint-config-iamnapo) [![npm](https://flat.badgen.net/npm/v/eslint-config-iamnapo)](https://www.npmjs.com/package/eslint-config-iamnapo) [![license](https://flat.badgen.net/github/license/iamnapo/eslint-config-iamnapo)](./LICENSE) [![style](https://flat.badgen.net/badge/code%20style/iamnapo/cyan)](https://iamnapo.me)
+[![travis](https://img.shields.io/travis/com/iamnapo/eslint-config-iamnapo.svg?style=flat-square&logo=travis&label=)](https://travis-ci.com/iamnapo/eslint-config-iamnapo) [![npm](https://img.shields.io/npm/v/eslint-config-iamnapo.svg?style=flat-square)](https://www.npmjs.com/package/eslint-config-iamnapo) [![license](https://img.shields.io/github/license/iamnapo/eslint-config-iamnapo.svg?style=flat-square)](./LICENSE) [![style](https://img.shields.io/badge/code%20style-iamnapo-cyan.svg?style=flat-square)](https://iamnapo.me)
 
 ## Usage
 
