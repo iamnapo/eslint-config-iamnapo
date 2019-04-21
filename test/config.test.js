@@ -1,25 +1,17 @@
-const test = require('tape');
+const test = require('ava');
 const eslint = require('eslint');
-
-const config = require('../');
 
 test('load config in eslint to validate all rule syntax is correct', (t) => {
   const { CLIEngine } = eslint;
-
   const cli = new CLIEngine({ useEslintrc: false, configFile: '.eslintrc.json' });
-
   const code = 'const foo = 1;\nconst bar = () => {};\nbar(foo);\n';
-  t.equal(cli.executeOnText(code).errorCount, 0);
-  t.end();
+  t.is(cli.executeOnText(code).errorCount, 0);
 });
 
 test('test basic properties of config', (t) => {
-  t.ok(isObject(config.env));
-  t.ok(isObject(config.plugins));
-  t.ok(isObject(config.rules));
-  t.end();
+  const { env, plugins, rules } = require('..');
+  const isObject = value => value && typeof value === 'object' && value.constructor === Object;
+  t.true(isObject(env));
+  t.true(Array.isArray(plugins));
+  t.true(isObject(rules));
 });
-
-function isObject(obj) {
-  return typeof obj === 'object' && obj !== null;
-}

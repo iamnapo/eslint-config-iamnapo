@@ -16,6 +16,8 @@
     "jsx-a11y"
   ],
   "rules": {
+    "no-restricted-syntax": "off",
+    "no-await-in-loop": "off",
     "prefer-destructuring": [ "error", { "object": true, "array": false } ],
     "react/jsx-filename-extension": [ 1, { "extensions": [ ".js", ".jsx" ] } ],
     "no-use-before-define": "off",
