@@ -32,22 +32,6 @@
     "function-paren-newline": "off",
     "no-nested-ternary": "off",
     "react/no-array-index-key": "off",
-    "object-curly-newline": [
-      "error",
-      {
-        "ObjectExpression": {
-          "multiline": true,
-          "minProperties": 5
-        },
-        "ObjectPattern": {
-          "multiline": true
-        },
-        "ImportDeclaration": "never",
-        "ExportDeclaration": {
-          "multiline": true,
-          "minProperties": 3
-        }
-      }
-    ]
+    "object-curly-newline": "off"
   }
 }
