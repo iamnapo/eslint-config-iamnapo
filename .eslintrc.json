@@ -6,6 +6,9 @@
     "jest": true
   },
   "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 2015
+  },
   "extends": [
     "airbnb",
     "plugin:react/recommended",
@@ -19,7 +22,7 @@
     "no-restricted-syntax": "off",
     "no-await-in-loop": "off",
     "prefer-destructuring": [ "error", { "object": true, "array": false } ],
-    "react/jsx-filename-extension": [ 1, { "extensions": [ ".js", ".jsx" ] } ],
+    "react/jsx-filename-extension": [ "error", { "extensions": [ ".js", ".jsx" ] } ],
     "no-use-before-define": "off",
     "no-param-reassign": "off",
     "react/forbid-prop-types": "off",
@@ -29,7 +32,6 @@
     "max-len": ["error", { "code": 150 }],
     "class-methods-use-this": "off",
     "no-return-assign": "off",
-    "function-paren-newline": "off",
     "no-nested-ternary": "off",
     "react/no-array-index-key": "off",
     "object-curly-newline": "off"
