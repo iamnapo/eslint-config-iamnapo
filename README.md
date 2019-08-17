@@ -7,7 +7,7 @@
 ## Usage
 
 ```bash
-$ npm i eslint-config-iamnapo babel-eslint eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react -D
+$ npm i eslint-config-iamnapo babel-eslint eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks -D
 ```
 
 Then, add this to your `.eslintrc` file:
@@ -21,7 +21,16 @@ Then, add this to your `.eslintrc` file:
 *Note: `eslint-config-` prefix is omitted, since it is automatically assumed by ESLint.*
 
 You can override settings from the shareable config by adding them directly into your
-`.eslintrc` file.
+`.eslintrc` file. For example:
+
+```json
+{
+  "extends": "iamnapo",
+  "rules": {
+    "quotes": ["error", "single"]
+  }
+}
+```
 
 ## License
 

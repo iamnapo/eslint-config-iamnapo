@@ -16,8 +16,14 @@
   ],
   "plugins": [
     "react",
-    "jsx-a11y"
+    "jsx-a11y",
+    "react-hooks"
   ],
+  "settings": {
+    "react": {
+      "version": "999.999.999"
+    }
+  },
   "rules": {
     "no-restricted-syntax": "off",
     "no-await-in-loop": "off",
@@ -34,6 +40,12 @@
     "no-return-assign": "off",
     "no-nested-ternary": "off",
     "react/no-array-index-key": "off",
-    "object-curly-newline": "off"
+    "object-curly-newline": "off",
+    "quotes": ["error", "double"],
+    "react/jsx-props-no-spreading": "off",
+    "react/destructuring-assignment": "off",
+    "react/display-name": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   }
 }

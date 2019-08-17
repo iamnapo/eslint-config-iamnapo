@@ -27,18 +27,20 @@
     "ava": "^2.2.0",
     "babel-eslint": "^10.0.2",
     "eslint": "^6.1.0",
-    "eslint-config-airbnb": "^17.1.1",
+    "eslint-config-airbnb": "^18.0.1",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.14.3"
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0"
   },
   "peerDependencies": {
     "babel-eslint": ">=10",
     "eslint": ">=6",
-    "eslint-config-airbnb": ">=17",
+    "eslint-config-airbnb": ">=18",
     "eslint-plugin-import": ">=2",
     "eslint-plugin-jsx-a11y": ">=6",
-    "eslint-plugin-react": ">=7"
+    "eslint-plugin-react": ">=7",
+    "eslint-plugin-react-hooks": ">=1"
   },
   "engines": {
     "node": ">=10"

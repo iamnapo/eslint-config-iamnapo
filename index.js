@@ -1,1 +1,1 @@
-module.exports = Object.assign({}, require('./.eslintrc.json'));
+module.exports = require("./.eslintrc.json");
