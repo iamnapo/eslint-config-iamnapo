@@ -7,7 +7,7 @@
 ## Usage
 
 ```bash
-$ npm i eslint-config-iamnapo babel-eslint eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks -D
+$ npm i eslint-config-iamnapo eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks -D
 ```
 
 Then, add this to your `.eslintrc` file:
