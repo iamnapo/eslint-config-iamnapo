@@ -6,8 +6,8 @@
 
 ## Usage
 
-```bash
-$ npm i eslint-config-iamnapo eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks -D
+```console
+$ npx install-peerdeps --dev eslint-config-iamnapo
 ```
 
 Then, add this to your `.eslintrc` file:
