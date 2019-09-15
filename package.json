@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-iamnapo",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "ESLint shareable config for iamnapo's coding style",
   "homepage": "https://github.com/iamnapo/eslint-config-iamnapo#readme",
   "bugs": {
