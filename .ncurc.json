@@ -1,4 +1,4 @@
 {
-  "upgrade": true,
-  "dep": "dev"
+	"upgrade": true,
+	"dep": "dev"
 }

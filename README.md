@@ -14,21 +14,21 @@ Then, add this to your `.eslintrc` file:
 
 ```json
 {
-  "extends": "iamnapo"
+	"extends": "iamnapo"
 }
 ```
 
-*Note: `eslint-config-` prefix is omitted, since it is automatically assumed by ESLint.*
+_Note: `eslint-config-` prefix is omitted, since it is automatically assumed by ESLint._
 
 You can override settings from the shareable config by adding them directly into your
 `.eslintrc` file. For example:
 
 ```json
 {
-  "extends": "iamnapo",
-  "rules": {
-    "quotes": ["error", "single"]
-  }
+	"extends": "iamnapo",
+	"rules": {
+		"quotes": ["error", "single"]
+	}
 }
 ```
 
