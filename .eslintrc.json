@@ -29,7 +29,7 @@
 		"class-methods-use-this": "off",
 		"global-require": "off",
 		"indent": ["error", "tab"],
-		"max-len": ["error", { "code": 150 }],
+		"max-len": ["error", { "code": 150, "tabWidth": 2 }],
 		"no-await-in-loop": "off",
 		"no-console": "off",
 		"no-nested-ternary": "off",
