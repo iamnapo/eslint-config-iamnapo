@@ -38,6 +38,7 @@
 		"no-return-assign": "off",
 		"no-tabs": "off",
 		"no-underscore-dangle": "off",
+		"no-unused-vars": ["error", { "varsIgnorePattern": "^_" }],
 		"no-use-before-define": "off",
 		"object-curly-newline": "off",
 		"prefer-destructuring": "off",

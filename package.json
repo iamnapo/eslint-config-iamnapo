@@ -24,12 +24,12 @@
 	},
 	"devDependencies": {
 		"ava": "^2.4.0",
-		"eslint": "^6.6.0",
+		"eslint": "^6.8.0",
 		"eslint-config-airbnb": "^18.0.1",
-		"eslint-plugin-import": "^2.18.2",
+		"eslint-plugin-import": "^2.20.0",
 		"eslint-plugin-jsx-a11y": "^6.2.3",
-		"eslint-plugin-react": "^7.16.0",
-		"eslint-plugin-react-hooks": "^2.2.0"
+		"eslint-plugin-react": "^7.17.0",
+		"eslint-plugin-react-hooks": "^2.3.0"
 	},
 	"peerDependencies": {
 		"eslint": ">=6",
