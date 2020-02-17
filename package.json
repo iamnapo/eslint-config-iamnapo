@@ -20,16 +20,17 @@
 	"main": "index.js",
 	"scripts": {
 		"lint": "eslint . --config=.eslintrc.json",
-		"test": "npm run lint && ava --verbose"
+		"test": "npm run lint && ava -v"
 	},
 	"devDependencies": {
-		"ava": "^2.4.0",
+		"ava": "^3.3.0",
 		"eslint": "^6.8.0",
 		"eslint-config-airbnb": "^18.0.1",
-		"eslint-plugin-import": "^2.20.0",
+		"eslint-plugin-import": "^2.20.1",
 		"eslint-plugin-jsx-a11y": "^6.2.3",
-		"eslint-plugin-react": "^7.18.0",
-		"eslint-plugin-react-hooks": "^2.3.0"
+		"eslint-plugin-react": "^7.18.3",
+		"eslint-plugin-react-hooks": "^2.3.0",
+		"eslint-plugin-unicorn": "^16.1.1"
 	},
 	"peerDependencies": {
 		"eslint": ">=6",
@@ -37,7 +38,8 @@
 		"eslint-plugin-import": ">=2",
 		"eslint-plugin-jsx-a11y": ">=6",
 		"eslint-plugin-react": ">=7",
-		"eslint-plugin-react-hooks": ">=2"
+		"eslint-plugin-react-hooks": ">=2",
+		"eslint-plugin-unicorn": ">=16"
 	},
 	"engines": {
 		"node": ">=10"

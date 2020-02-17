@@ -16,10 +16,11 @@
 	"extends": [
 		"airbnb",
 		"plugin:react/recommended",
-		"plugin:jsx-a11y/recommended"
+		"plugin:jsx-a11y/recommended",
+		"plugin:unicorn/recommended"
 	],
 
-	"plugins": ["react", "jsx-a11y", "react-hooks"],
+	"plugins": ["react", "jsx-a11y", "react-hooks", "unicorn"],
 	"settings": {
 		"react": {
 			"version": "999.999.999"
@@ -53,6 +54,9 @@
 		"react/jsx-indent": ["error", "tab"],
 		"react/jsx-indent-props": ["error", "tab"],
 		"react/jsx-props-no-spreading": "off",
-		"react/no-array-index-key": "off"
+		"react/no-array-index-key": "off",
+		"unicorn/filename-case": "off",
+		"unicorn/prevent-abbreviations": "off",
+		"unicorn/no-nested-ternary": "off"
 	}
 }
