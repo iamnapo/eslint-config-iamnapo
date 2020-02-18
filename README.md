@@ -2,7 +2,7 @@
 
 > ESLint shareable config for [iamnapo](https://iamnapo.me)'s coding style
 
-[![travis](https://img.shields.io/travis/com/iamnapo/eslint-config-iamnapo.svg?style=for-the-badge&logo=travis&label=)](https://travis-ci.com/iamnapo/eslint-config-iamnapo) [![npm](https://img.shields.io/npm/v/eslint-config-iamnapo.svg?style=for-the-badge&logo=npm&label=)](https://www.npmjs.com/package/eslint-config-iamnapo) [![license](https://img.shields.io/github/license/iamnapo/eslint-config-iamnapo.svg?style=for-the-badge)](./LICENSE) [![style](https://img.shields.io/badge/code%20style-iamnapo-cyan.svg?style=for-the-badge)](https://iamnapo.me)
+[![build](https://img.shields.io/github/workflow/status/iamnapo/eslint-config-iamnapo/Install%20%26%20test?style=for-the-badge&logo=github&label=)](https://github.com/iamnapo/eslint-config-iamnapo/actions) [![npm](https://img.shields.io/npm/v/eslint-config-iamnapo.svg?style=for-the-badge&logo=npm&label=)](https://www.npmjs.com/package/eslint-config-iamnapo) [![license](https://img.shields.io/github/license/iamnapo/eslint-config-iamnapo.svg?style=for-the-badge)](./LICENSE) [![style](https://img.shields.io/badge/code%20style-iamnapo-cyan.svg?style=for-the-badge)](https://iamnapo.me)
 
 ## Usage
 
