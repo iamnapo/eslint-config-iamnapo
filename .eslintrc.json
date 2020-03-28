@@ -27,7 +27,6 @@
 		}
 	},
 	"rules": {
-		"class-methods-use-this": "off",
 		"global-require": "off",
 		"indent": ["error", "tab"],
 		"max-len": ["error", { "code": 150, "tabWidth": 2 }],
@@ -57,7 +56,6 @@
 		"react/no-array-index-key": "off",
 		"unicorn/filename-case": "off",
 		"unicorn/prevent-abbreviations": "off",
-		"unicorn/no-nested-ternary": "off",
-		"unicorn/string-content": "error"
+		"unicorn/no-nested-ternary": "off"
 	}
 }
