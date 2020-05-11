@@ -1,7 +1,7 @@
 {
 	"name": "eslint-config-iamnapo",
 	"version": "3.1.0",
-	"description": "ESLint shareable config for iamnapo's coding style",
+	"description": "ESLint shareable config for iamnapo’s coding style",
 	"homepage": "https://github.com/iamnapo/eslint-config-iamnapo#readme",
 	"bugs": {
 		"url": "https://github.com/iamnapo/eslint-config-iamnapo/issues"
@@ -9,7 +9,7 @@
 	"repository": "github:iamnapo/eslint-config-iamnapo",
 	"license": "MIT",
 	"author": {
-		"name": "Napoleon Oikonomou",
+		"name": "Napoleon-Christos Oikonomou",
 		"email": "Napoleonoikon@gmail.com",
 		"url": "https://iamnapo.me"
 	},
@@ -19,30 +19,30 @@
 	],
 	"main": "index.js",
 	"scripts": {
-		"lint": "eslint . --config=.eslintrc.json",
+		"lint": "eslint .",
 		"test": "yarn lint && ava -v"
 	},
 	"devDependencies": {
-		"ava": "^3.8.0",
-		"eslint": "^6.8.0",
+		"ava": "^3.8.2",
+		"eslint": "^7.0.0",
 		"eslint-config-airbnb": "^18.1.0",
 		"eslint-plugin-import": "^2.20.2",
 		"eslint-plugin-jsx-a11y": "^6.2.3",
 		"eslint-plugin-react": "^7.19.0",
-		"eslint-plugin-react-hooks": "^3.0.0",
+		"eslint-plugin-react-hooks": "^4.0.0",
 		"eslint-plugin-unicorn": "^19.0.1"
 	},
 	"peerDependencies": {
-		"eslint": ">=6",
+		"eslint": ">=7",
 		"eslint-config-airbnb": ">=18",
 		"eslint-plugin-import": ">=2",
 		"eslint-plugin-jsx-a11y": ">=6",
 		"eslint-plugin-react": ">=7",
-		"eslint-plugin-react-hooks": ">=3",
+		"eslint-plugin-react-hooks": ">=4",
 		"eslint-plugin-unicorn": ">=19"
 	},
 	"engines": {
-		"node": ">=10"
+		"node": "^10.12.0 || >=12.0.0"
 	},
 	"keywords ": [
 		"eslint",
