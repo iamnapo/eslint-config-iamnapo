@@ -43,6 +43,7 @@
 		"object-curly-newline": "off",
 		"prefer-destructuring": "off",
 		"quotes": ["error", "double"],
+		"array-callback-return": ["error", { "allowImplicit": true }],
 		"react-hooks/exhaustive-deps": "warn",
 		"react-hooks/rules-of-hooks": "error",
 		"react/destructuring-assignment": "off",
@@ -58,6 +59,7 @@
 		"unicorn/prevent-abbreviations": "off",
 		"unicorn/no-nested-ternary": "off",
 		"unicorn/no-null": "off",
-		"unicorn/no-fn-reference-in-iterator": "off"
+		"unicorn/no-fn-reference-in-iterator": "off",
+		"unicorn/no-reduce": "off"
 	}
 }
