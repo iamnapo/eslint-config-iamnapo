@@ -44,6 +44,8 @@
 		"prefer-destructuring": "off",
 		"quotes": ["error", "double"],
 		"array-callback-return": ["error", { "allowImplicit": true }],
+		"no-multiple-empty-lines": ["error", { "max": 1 }],
+		"import/order": ["error", { "newlines-between": "always" }],
 		"react-hooks/exhaustive-deps": "warn",
 		"react-hooks/rules-of-hooks": "error",
 		"react/destructuring-assignment": "off",
@@ -60,6 +62,7 @@
 		"unicorn/no-nested-ternary": "off",
 		"unicorn/no-null": "off",
 		"unicorn/no-fn-reference-in-iterator": "off",
-		"unicorn/no-reduce": "off"
+		"unicorn/no-reduce": "off",
+		"unicorn/import-index": ["error", { "ignoreImports": true }]
 	}
 }
