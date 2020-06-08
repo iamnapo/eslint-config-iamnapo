@@ -23,26 +23,25 @@
 		"lint": "eslint .",
 		"test": "yarn lint && ava -v"
 	},
+	"dependencies": {
+		"eslint-config-airbnb": "^18.1.0"
+	},
 	"devDependencies": {
 		"ava": "^3.8.2",
 		"eslint": "^7.2.0",
-		"eslint-config-airbnb": "^18.1.0",
-		"eslint-config-airbnb-base": "^14.1.0",
-		"eslint-plugin-import": "^2.20.2",
+		"eslint-plugin-import": "^2.21.1",
 		"eslint-plugin-jsx-a11y": "^6.2.3",
 		"eslint-plugin-react": "^7.20.0",
 		"eslint-plugin-react-hooks": "^4.0.4",
 		"eslint-plugin-unicorn": "^20.1.0"
 	},
 	"peerDependencies": {
-		"eslint": ">=7",
-		"eslint-config-airbnb": ">=18",
-		"eslint-config-airbnb-base": ">=14",
-		"eslint-plugin-import": ">=2",
-		"eslint-plugin-jsx-a11y": ">=6",
-		"eslint-plugin-react": ">=7",
-		"eslint-plugin-react-hooks": ">=4",
-		"eslint-plugin-unicorn": ">=20"
+		"eslint": "^7.2.0",
+		"eslint-plugin-import": "^2.21.1",
+		"eslint-plugin-jsx-a11y": "^6.2.3",
+		"eslint-plugin-react": "^7.20.0",
+		"eslint-plugin-react-hooks": "^4.0.4",
+		"eslint-plugin-unicorn": "^20.1.0"
 	},
 	"engines": {
 		"node": "^10.12.0 || >=12.0.0"

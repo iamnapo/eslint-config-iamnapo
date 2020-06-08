@@ -23,7 +23,7 @@ Then, add this to your `.eslintrc` file:
 ### Without React
 
 ```console
-$ npm i --dev eslint-config-iamnapo eslint-config-airbnb-base eslint-plugin-import eslint-plugin-unicorn
+$ npm i eslint-config-iamnapo eslint-plugin-import eslint-plugin-unicorn -D
 ```
 
 Then, add this to your `.eslintrc` file:
