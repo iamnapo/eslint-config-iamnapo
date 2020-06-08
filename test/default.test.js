@@ -6,7 +6,7 @@ const { env, plugins, rules } = require("..");
 const isObject = (value) => value && typeof value === "object" && value.constructor === Object;
 
 test("load config in eslint to validate all rule syntax is correct", async (t) => {
-	const linter = new ESLint({ useEslintrc: false, overrideConfigFile: ".eslintrc.json" });
+	const linter = new ESLint({ useEslintrc: false, overrideConfigFile: "index.js" });
 	const code = "const foo = 1;\nconst bar = () => {};\nbar(foo);\n";
 	t.is((await linter.lintText(code))[0].errorCount, 0);
 });
