@@ -2,6 +2,15 @@
 	"name": "eslint-config-iamnapo",
 	"version": "8.0.0",
 	"description": "ESLint shareable config for iamnapo’s coding style",
+	"keywords": [
+		"eslint",
+		"eslintrc",
+		"eslintconfig",
+		"config",
+		"iamnapo",
+		"styleguide",
+		"react"
+	],
 	"homepage": "https://github.com/iamnapo/eslint-config-iamnapo#readme",
 	"bugs": {
 		"url": "https://github.com/iamnapo/eslint-config-iamnapo/issues"
@@ -21,7 +30,7 @@
 	],
 	"scripts": {
 		"lint": "eslint .",
-		"test": "yarn lint && ava -v"
+		"test": "npm run lint && ava -v"
 	},
 	"dependencies": {
 		"eslint-config-airbnb": "^18.2.0"
@@ -31,7 +40,7 @@
 		"eslint": "^7.9.0",
 		"eslint-plugin-import": "^2.22.0",
 		"eslint-plugin-jsx-a11y": "^6.3.1",
-		"eslint-plugin-react": "^7.20.6",
+		"eslint-plugin-react": "^7.21.2",
 		"eslint-plugin-react-hooks": "^4.1.2",
 		"eslint-plugin-unicorn": "^22.0.0"
 	},
@@ -39,20 +48,11 @@
 		"eslint": "^7.9.0",
 		"eslint-plugin-import": "^2.22.0",
 		"eslint-plugin-jsx-a11y": "^6.3.1",
-		"eslint-plugin-react": "^7.20.6",
+		"eslint-plugin-react": "^7.21.2",
 		"eslint-plugin-react-hooks": "^4.1.2",
 		"eslint-plugin-unicorn": "^22.0.0"
 	},
 	"engines": {
 		"node": ">=12.0.0"
-	},
-	"keywords ": [
-		"eslint",
-		"eslintrc",
-		"eslintconfig",
-		"config",
-		"iamnapo",
-		"styleguide",
-		"react"
-	]
+	}
 }
