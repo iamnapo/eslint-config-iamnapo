@@ -11,7 +11,7 @@ test("load config in eslint to validate all rule syntax is correct", async (t) =
 	import React from "react";
 	import ReactDOM from "react-dom";
 
-	const element = <h1>Hello, world</h1>;
+	const element = <h1>{"Hello, world"}</h1>;
 	ReactDOM.render(element, document.querySelector("#root"));
 	`.replace(/\t*/g, "");
 	const { errorCount, messages } = (await linter.lintText(code))[0];
