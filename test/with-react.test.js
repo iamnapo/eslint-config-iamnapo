@@ -6,7 +6,7 @@ const { env, plugins, rules } = require("../with-react");
 const isObject = (value) => value && typeof value === "object" && value.constructor === Object;
 
 test("load config in eslint to validate all rule syntax is correct", async (t) => {
-	const linter = new ESLint({ useEslintrc: false, overrideConfigFile: "with-react.js" });
+	const linter = new ESLint({ overrideConfigFile: "with-react.js", overrideConfig: { rules: { "import/no-unresolved": "off" } } });
 	const code = `
 	import React from "react";
 	import ReactDOM from "react-dom";
@@ -14,9 +14,8 @@ test("load config in eslint to validate all rule syntax is correct", async (t) =
 	const element = <h1>{"Hello, world"}</h1>;
 	ReactDOM.render(element, document.querySelector("#root"));
 	`.replace(/\t*/g, "");
-	const { errorCount, messages } = (await linter.lintText(code))[0];
-	t.is(errorCount, 2);
-	t.true(messages.every((message) => message.ruleId === "import/no-unresolved"));
+	const { errorCount } = (await linter.lintText(code))[0];
+	t.is(errorCount, 0);
 });
 
 test("test basic properties of config", (t) => {
