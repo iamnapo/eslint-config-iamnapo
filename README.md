@@ -6,48 +6,34 @@
 
 ## Install
 
-### With React
+```console
+$ npm i eslint-config-iamnapo eslint-plugin-import eslint-plugin-unicorn -D
+```
+
+Then, add this to your `.eslintrc.js`:
+
+```js
+module.exports = {
+	extends: "iamnapo",
+	rules: {
+		// your overrides
+	},
+};
+```
+
+### With React support
 
 ```console
 $ npx install-peerdeps --dev eslint-config-iamnapo
 ```
 
-Then, add this to your `.eslintrc` file:
+Then, add this to your `.eslintrc.js`:
 
-```json
-{
-	"extends": "iamnapo/with-react"
-}
+```js
+module.exports = {
+	extends: "iamnapo/with-react",
+	rules: {
+		// your overrides
+	},
+};
 ```
-
-### Without React
-
-```console
-$ npm i eslint-config-iamnapo eslint-plugin-import eslint-plugin-unicorn -D
-```
-
-Then, add this to your `.eslintrc` file:
-
-```json
-{
-	"extends": "iamnapo"
-}
-```
-
-## Usage
-
-_Note: `eslint-config-` prefix is omitted, since it is automatically assumed by ESLint._
-
-You can override settings from the shareable config by adding them directly into your
-`.eslintrc` file. For example:
-
-```json
-{
-	"extends": "iamnapo",
-	"rules": {
-		"quotes": ["error", "single"]
-	}
-}
-```
-
-> If you’re using [GitHub Package Registry](https://github.com/features/package-registry), the package is called `@iamnapo/eslint-config-iamnapo`.
