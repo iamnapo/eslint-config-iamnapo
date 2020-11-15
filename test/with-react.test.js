@@ -8,7 +8,6 @@ const isObject = (value) => value && typeof value === "object" && value.construc
 test("load config in eslint to validate all rule syntax is correct", async (t) => {
 	const linter = new ESLint({ overrideConfigFile: "with-react.js", overrideConfig: { rules: { "import/no-unresolved": "off" } } });
 	const code = `
-	import React from "react";
 	import ReactDOM from "react-dom";
 
 	const element = <h1>{"Hello, world"}</h1>;
