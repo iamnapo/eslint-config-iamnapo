@@ -8,13 +8,21 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - run: npx replace-in-file \"eslint-config-iamnapo\" \"@iamnapo\/eslint-config-iamnapo\" package.json
-      - uses: actions/setup-node@v1
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v2
+
+      - name: 🏗 Run replace-in-file
+        run: npx replace-in-file \"eslint-config-iamnapo\" \"@iamnapo\/eslint-config-iamnapo\" package.json
+
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v1
         with:
           node-version: 15
-          registry-url: https://npm.pkg.github.com/
+          registry-url: "https://npm.pkg.github.com"
           scope: "@iamnapo"
-      - run: npm publish
+
+      - name: 🚀 Release
+        run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+

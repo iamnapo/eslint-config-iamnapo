@@ -10,8 +10,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v2
+
+      - name: 📚 Initialize CodeQL
       - uses: github/codeql-action/init@v1
         with:
           languages: javascript
+
+      - name: ℹ️ Perform CodeQL Analysis
       - uses: github/codeql-action/analyze@v1
