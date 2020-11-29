@@ -19,5 +19,5 @@ jobs:
         with:
           useLockFile: false
 
-      - name: ▶️ Run validate script
+      - name: 🧪 Run test script
         run: npm test
