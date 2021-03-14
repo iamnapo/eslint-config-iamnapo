@@ -7,7 +7,7 @@
 ## Install
 
 ```console
-$ npm i eslint-config-iamnapo eslint-plugin-import eslint-plugin-unicorn -D
+$ npm i eslint-config-iamnapo eslint eslint-plugin-import eslint-plugin-unicorn -D
 ```
 
 Then, add this to your `.eslintrc.js`:
