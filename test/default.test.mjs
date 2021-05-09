@@ -1,7 +1,9 @@
-const test = require("ava");
-const { ESLint } = require("eslint");
+import test from "ava";
+import { ESLint } from "eslint";
 
-const { env, plugins, rules } = require("..");
+import config from "../index.js";
+
+const { env, plugins, rules } = config;
 
 const isObject = (value) => value && typeof value === "object" && value.constructor === Object;
 
