@@ -7,7 +7,7 @@
 ## Install
 
 ```console
-$ npm i eslint-config-iamnapo eslint eslint-plugin-import eslint-plugin-unicorn -D
+npm i eslint-config-iamnapo eslint eslint-plugin-import eslint-plugin-unicorn -D
 ```
 
 Then, add this to your `.eslintrc.js`:
@@ -24,7 +24,7 @@ module.exports = {
 ### With React support
 
 ```console
-$ npx install-peerdeps --dev eslint-config-iamnapo
+npx install-peerdeps --dev eslint-config-iamnapo
 ```
 
 Then, add this to your `.eslintrc.js`:
