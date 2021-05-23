@@ -1,1 +1,1 @@
-module.exports = require("./lib/with-react");
+module.exports = require("./lib/with-react.js");
