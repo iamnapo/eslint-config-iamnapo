@@ -8,7 +8,7 @@ const { env, plugins, rules } = config;
 const isObject = (value) => value && typeof value === "object" && value.constructor === Object;
 
 test("load config in eslint to validate all rule syntax is correct", async (t) => {
-	const linter = new ESLint({ useEslintrc: false, overrideConfigFile: "index.js" });
+	const linter = new ESLint();
 	const code = `
 	const foo = 1;
 	const bar = () => {};

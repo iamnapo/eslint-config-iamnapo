@@ -35,6 +35,12 @@
 	"dependencies": {
 		"eslint-config-airbnb": "^18.2.1"
 	},
+	"eslintConfig": {
+		"extends": ".",
+		"rules": {
+			"unicorn/prefer-module": "off"
+		}
+	},
 	"devDependencies": {
 		"ava": "^3.15.0",
 		"eslint": "^7.26.0",

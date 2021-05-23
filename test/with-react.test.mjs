@@ -3,8 +3,6 @@ import { ESLint } from "eslint";
 
 import config from "../with-react.js";
 
-const { env, plugins, rules } = config;
-
 const isObject = (value) => value && typeof value === "object" && value.constructor === Object;
 
 test("load config in eslint to validate all rule syntax is correct", async (t) => {
@@ -20,6 +18,8 @@ test("load config in eslint to validate all rule syntax is correct", async (t) =
 });
 
 test("test basic properties of config", (t) => {
+	const { env, plugins, rules } = config;
+
 	t.true(isObject(env));
 	t.true(Array.isArray(plugins));
 	t.true(isObject(rules));
