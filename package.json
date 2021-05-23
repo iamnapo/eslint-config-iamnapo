@@ -33,8 +33,7 @@
 		"test": "npm run lint && ava -v"
 	},
 	"dependencies": {
-		"eslint-config-airbnb": "^18.2.1",
-		"semver": "^7.3.5"
+		"eslint-config-airbnb": "^18.2.1"
 	},
 	"devDependencies": {
 		"ava": "^3.15.0",
