@@ -2,7 +2,7 @@
 
 > ESLint shareable config for [iamnapo](https://iamnapo.me)’s coding style
 
-[![build](https://img.shields.io/github/workflow/status/iamnapo/eslint-config-iamnapo/ci?style=for-the-badge&logo=github&label=)](https://github.com/iamnapo/eslint-config-iamnapo/actions) [![npm](https://img.shields.io/npm/v/eslint-config-iamnapo.svg?style=for-the-badge&logo=npm&label=)](https://www.npmjs.com/package/eslint-config-iamnapo) [![style](https://img.shields.io/badge/code%20style-iamnapo-cyan.svg?style=for-the-badge)](https://iamnapo.me)
+[![build](https://badges.iamnapo.me/ci/iamnapo/eslint-config-iamnapo)](https://github.com/iamnapo/eslint-config-iamnapo/actions) [![npm](https://badges.iamnapo.me/npm/eslint-config-iamnapo)](https://www.npmjs.com/package/eslint-config-iamnapo) [![style](https://badges.iamnapo.me/style)](https://iamnapo.me)
 
 ## Install
 
