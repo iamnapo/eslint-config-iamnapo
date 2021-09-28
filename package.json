@@ -25,15 +25,13 @@
 	"main": "index.js",
 	"files": [
 		"index.js",
+		"typescript.js",
 		"with-react.js",
-		"lib"
+		"with-react-typescript.js"
 	],
 	"scripts": {
 		"lint": "eslint . --cache",
 		"test": "npm run lint && ava -v"
-	},
-	"dependencies": {
-		"eslint-config-airbnb": "^18.2.1"
 	},
 	"eslintConfig": {
 		"extends": ".",
@@ -41,24 +39,40 @@
 			"unicorn/prefer-module": "off"
 		}
 	},
+	"dependencies": {
+		"eslint-config-airbnb": "^18.2.1",
+		"eslint-config-airbnb-typescript": "^14.0.0"
+	},
 	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^4.31.2",
+		"@typescript-eslint/parser": "^4.31.2",
 		"ava": "^3.15.0",
-		"eslint": "^7.30.0",
-		"eslint-plugin-import": "^2.23.4",
+		"eslint": "^7.32.0",
+		"eslint-plugin-import": "^2.24.2",
 		"eslint-plugin-jsx-a11y": "^6.4.1",
-		"eslint-plugin-react": "^7.24.0",
+		"eslint-plugin-react": "^7.26.0",
 		"eslint-plugin-react-hooks": "^4.2.0",
-		"eslint-plugin-unicorn": "^34.0.1"
+		"eslint-plugin-unicorn": "^36.0.0",
+		"typescript": ">=4.4"
 	},
 	"peerDependencies": {
+		"@typescript-eslint/eslint-plugin": ">=4",
+		"@typescript-eslint/parser": ">=4",
 		"eslint": ">=7",
 		"eslint-plugin-import": ">=2",
 		"eslint-plugin-jsx-a11y": ">=6",
 		"eslint-plugin-react": ">=7",
 		"eslint-plugin-react-hooks": ">=4",
-		"eslint-plugin-unicorn": ">=34"
+		"eslint-plugin-unicorn": ">=36",
+		"typescript": ">=4.4"
 	},
 	"peerDependenciesMeta": {
+		"@typescript-eslint/eslint-plugin": {
+			"optional": true
+		},
+		"@typescript-eslint/parser": {
+			"optional": true
+		},
 		"eslint-plugin-jsx-a11y": {
 			"optional": true
 		},
@@ -67,9 +81,12 @@
 		},
 		"eslint-plugin-react-hooks": {
 			"optional": true
+		},
+		"typescript": {
+			"optional": true
 		}
 	},
 	"engines": {
-		"node": ">=12"
+		"node": ">=14"
 	}
 }

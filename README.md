@@ -24,7 +24,7 @@ module.exports = {
 ### With React support
 
 ```console
-npx install-peerdeps --dev eslint-config-iamnapo
+npm i eslint-config-iamnapo eslint eslint-plugin-import eslint-plugin-unicorn eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks -D
 ```
 
 Then, add this to your `.eslintrc.js`:
@@ -32,6 +32,40 @@ Then, add this to your `.eslintrc.js`:
 ```js
 module.exports = {
 	extends: "iamnapo/with-react",
+	rules: {
+		// your overrides
+	},
+};
+```
+
+### With TypeScript support
+
+```console
+npm i eslint-config-iamnapo eslint eslint-plugin-import eslint-plugin-unicorn @typescript-eslint/eslint-plugin @typescript-eslint/parser typescript -D
+```
+
+Then, add this to your `.eslintrc.js`:
+
+```js
+module.exports = {
+	extends: "iamnapo/typescript",
+	rules: {
+		// your overrides
+	},
+};
+```
+
+### With TypeScript & React support
+
+```console
+npx install-peerdeps --dev eslint-config-iamnapo
+```
+
+Then, add this to your `.eslintrc.js`:
+
+```js
+module.exports = {
+	extends: "iamnapo/with-react-typescript",
 	rules: {
 		// your overrides
 	},
