@@ -16,5 +16,6 @@ module.exports = {
 		"@typescript-eslint/quotes": ["error", "double"],
 		indent: "off",
 		"@typescript-eslint/indent": ["error", "tab", { SwitchCase: 1 }],
+		"@typescript-eslint/no-non-null-assertion": "off",
 	},
 };
