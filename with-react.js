@@ -35,6 +35,7 @@ module.exports = {
 		"react/jsx-indent-props": ["error", "tab"],
 		"react/jsx-no-useless-fragment": "error",
 		"react/jsx-props-no-spreading": "off",
+		"react/jsx-sort-props": ["error", { callbacksLast: true, shorthandFirst: true, noSortAlphabetically: true, reservedFirst: true }],
 		"react/jsx-uses-react": "off",
 		"react/no-array-index-key": "off",
 		"react/react-in-jsx-scope": "off",

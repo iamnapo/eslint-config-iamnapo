@@ -30,7 +30,7 @@
 		"with-react-typescript.js"
 	],
 	"scripts": {
-		"lint": "eslint . --cache",
+		"lint": "eslint . --ext .js,.mjs --cache",
 		"test": "npm run lint && ava -v"
 	},
 	"eslintConfig": {
