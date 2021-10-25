@@ -13,9 +13,10 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 16
+          cache: npm
 
       - name: 📥 Download deps
-        run: npm i --legacy-peer-deps
+        run: npm i
 
       - name: 🧪 Run test script
         run: npm test

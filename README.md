@@ -7,10 +7,14 @@
 ## Install
 
 ```console
-npm i eslint-config-iamnapo eslint eslint-plugin-import eslint-plugin-unicorn -D
+npm i eslint-config-iamnapo -D
 ```
 
-Then, add this to your `.eslintrc.js`:
+> This config requires `eslint` and (optionally) `typescript` to be installed.
+
+## Usage
+
+Add to your `.eslintrc.js` one of the available configs<sup>*</sup> like so:
 
 ```js
 module.exports = {
@@ -21,53 +25,12 @@ module.exports = {
 };
 ```
 
-### With React support
+<sup>*</sup>: `iamnapo`, `iamnapo/react`, `iamnapo/typescript`, `iamnapo/react-typescript`.
 
-```console
-npm i eslint-config-iamnapo eslint eslint-plugin-import eslint-plugin-unicorn eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks -D
-```
+### Monorepo support
 
-Then, add this to your `.eslintrc.js`:
+Due to [this](https://github.com/eslint/eslint/issues/3458) bug, if you are working on a monorepo add to the top of `.eslintrc.js`:
 
 ```js
-module.exports = {
-	extends: "iamnapo/with-react",
-	rules: {
-		// your overrides
-	},
-};
-```
-
-### With TypeScript support
-
-```console
-npm i eslint-config-iamnapo eslint eslint-plugin-import eslint-plugin-unicorn @typescript-eslint/eslint-plugin @typescript-eslint/parser typescript -D
-```
-
-Then, add this to your `.eslintrc.js`:
-
-```js
-module.exports = {
-	extends: "iamnapo/typescript",
-	rules: {
-		// your overrides
-	},
-};
-```
-
-### With TypeScript & React support
-
-```console
-npx install-peerdeps --dev eslint-config-iamnapo
-```
-
-Then, add this to your `.eslintrc.js`:
-
-```js
-module.exports = {
-	extends: "iamnapo/with-react-typescript",
-	rules: {
-		// your overrides
-	},
-};
+require("eslint-config-iamnapo/patch");
 ```

@@ -10,11 +10,7 @@ module.exports = {
 		es2020: true,
 		es2021: true,
 	},
-	parserOptions: {
-		ecmaVersion: 2021,
-		sourceType: "module",
-	},
-	extends: ["airbnb/base", "plugin:unicorn/recommended"],
+	extends: ["airbnb-base", "plugin:unicorn/recommended"],
 	plugins: ["unicorn"],
 	reportUnusedDisableDirectives: true,
 	rules: {

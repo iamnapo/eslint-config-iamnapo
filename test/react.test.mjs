@@ -1,12 +1,12 @@
 import test from "ava";
 import { ESLint } from "eslint";
 
-import config from "../with-react.js";
+import config from "../react.js";
 
 const isObject = (value) => value && typeof value === "object" && value.constructor === Object;
 
 test("load config in eslint to validate all rule syntax is correct", async (t) => {
-	const linter = new ESLint({ overrideConfigFile: "with-react.js", overrideConfig: { rules: { "import/no-unresolved": "off" } } });
+	const linter = new ESLint({ overrideConfigFile: "react.js", overrideConfig: { rules: { "import/no-unresolved": "off" } } });
 	const code = `
 	import ReactDOM from "react-dom";
 

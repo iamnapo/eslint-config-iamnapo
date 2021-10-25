@@ -5,7 +5,7 @@ const { parserOptions, rules, plugins } = require("./typescript.js");
  */
 module.exports = {
 	extends: [
-		"./with-react",
+		"./react",
 		"airbnb-typescript",
 		"plugin:@typescript-eslint/recommended",
 		"plugin:@typescript-eslint/recommended-requiring-type-checking",
