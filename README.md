@@ -29,7 +29,7 @@ module.exports = {
 
 ### Monorepo support
 
-Due to [this](https://github.com/eslint/eslint/issues/3458) bug, if you are working on a monorepo add to the top of `.eslintrc.js`:
+Due to [this](https://github.com/eslint/eslint/issues/3458) bug, if you are working on a monorepo, add to the top of `.eslintrc.js`:
 
 ```js
 require("eslint-config-iamnapo/patch");
