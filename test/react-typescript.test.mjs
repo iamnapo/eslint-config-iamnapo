@@ -13,7 +13,7 @@ test("load config in eslint to validate all rule syntax is correct", async (t) =
 	const element = <h1>{"Hello, world"}</h1>;
 	ReactDOM.render(element, document.querySelector("#root"));
 	`.replace(/\t*/g, "");
-	const { errorCount } = (await linter.lintText(code))[0];
+	const [{ errorCount }] = await linter.lintText(code);
 	t.is(errorCount, 1);
 });
 
