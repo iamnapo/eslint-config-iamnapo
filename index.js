@@ -54,7 +54,7 @@ module.exports = {
 		"unicorn/no-nested-ternary": "off",
 		"unicorn/no-null": "off",
 		"unicorn/prefer-switch": ["error", { emptyDefaultCase: "do-nothing-comment" }],
-		"unicorn/prefer-top-level-await": "off",
+		"unicorn/prefer-top-level-await": "error",
 		"unicorn/prevent-abbreviations": "off",
 		"wrap-iife": ["error", "inside", { functionPrototypeMethods: true }],
 	},
