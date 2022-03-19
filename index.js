@@ -9,6 +9,7 @@ module.exports = {
 		es2017: true,
 		es2020: true,
 		es2021: true,
+		es2022: true,
 	},
 	extends: ["airbnb-base", "plugin:unicorn/recommended"],
 	plugins: ["unicorn"],
