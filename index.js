@@ -54,6 +54,8 @@ module.exports = {
 		"unicorn/no-array-reduce": "off",
 		"unicorn/no-nested-ternary": "off",
 		"unicorn/no-null": "off",
+		"unicorn/prefer-at": "error",
+		"unicorn/prefer-string-replace-all": "error",
 		"unicorn/prefer-switch": ["error", { emptyDefaultCase: "do-nothing-comment" }],
 		"unicorn/prefer-top-level-await": "error",
 		"unicorn/prevent-abbreviations": "off",
