@@ -24,7 +24,6 @@ module.exports = {
 		},
 	},
 	rules: {
-		"import/extensions": ["error", "ignorePackages", { js: "never", mjs: "never", jsx: "never", tsx: "never" }],
 		"react-hooks/exhaustive-deps": "warn",
 		"react/destructuring-assignment": "off",
 		"react/display-name": "off",
@@ -32,7 +31,6 @@ module.exports = {
 		"react/function-component-definition": "off",
 		"react/hook-use-state": "error",
 		"react/jsx-curly-brace-presence": ["error", { props: "never", children: "always" }],
-		"react/jsx-filename-extension": "off",
 		"react/jsx-indent": ["error", "tab", { checkAttributes: true, indentLogicalExpressions: true }],
 		"react/jsx-indent-props": ["error", "tab"],
 		"react/jsx-key": ["error", { checkFragmentShorthand: true, checkKeyMustBeforeSpread: true, warnOnDuplicates: true }],
