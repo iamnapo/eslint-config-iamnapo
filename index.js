@@ -11,8 +11,8 @@ module.exports = {
 		es2021: true,
 		es2022: true,
 	},
-	extends: ["airbnb-base", "plugin:unicorn/recommended"],
-	plugins: ["unicorn"],
+	extends: ["airbnb-base", "plugin:ava/recommended", "plugin:unicorn/recommended"],
+	plugins: ["ava", "unicorn"],
 	reportUnusedDisableDirectives: true,
 	rules: {
 		"array-callback-return": ["error", { allowImplicit: true }],
