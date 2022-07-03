@@ -57,7 +57,6 @@ module.exports = {
 		"unicorn/prefer-at": "error",
 		"unicorn/prefer-string-replace-all": "error",
 		"unicorn/prefer-switch": ["error", { emptyDefaultCase: "do-nothing-comment" }],
-		"unicorn/prefer-top-level-await": "error",
 		"unicorn/prevent-abbreviations": "off",
 		"wrap-iife": ["error", "inside", { functionPrototypeMethods: true }],
 	},
