@@ -45,8 +45,8 @@
 	},
 	"dependencies": {
 		"@rushstack/eslint-patch": "^1.1.4",
-		"@typescript-eslint/eslint-plugin": "^5.30.3",
-		"@typescript-eslint/parser": "^5.30.3",
+		"@typescript-eslint/eslint-plugin": "^5.30.4",
+		"@typescript-eslint/parser": "^5.30.4",
 		"eslint-config-airbnb": "^19.0.4",
 		"eslint-config-airbnb-typescript": "^17.0.0",
 		"eslint-plugin-ava": "^13.2.0",
