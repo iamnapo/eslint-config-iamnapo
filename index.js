@@ -11,7 +11,7 @@ module.exports = {
 		es2021: true,
 		es2022: true,
 	},
-	extends: ["airbnb-base", "plugin:ava/recommended", "plugin:unicorn/recommended"],
+	extends: ["airbnb/base", "plugin:ava/recommended", "plugin:unicorn/recommended"],
 	plugins: ["ava", "unicorn"],
 	reportUnusedDisableDirectives: true,
 	rules: {
