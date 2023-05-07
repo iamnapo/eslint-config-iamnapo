@@ -34,7 +34,7 @@
 	],
 	"scripts": {
 		"lint": "eslint . --ext .js,.mjs --cache",
-		"test": "npm run lint && ava -v"
+		"test": "npm run lint && node --test"
 	},
 	"eslintConfig": {
 		"extends": ".",
@@ -64,7 +64,6 @@
 		"eslint-plugin-unicorn": "^47.0.0"
 	},
 	"devDependencies": {
-		"ava": "^5.2.0",
 		"eslint": "^8.40.0",
 		"typescript": "^5.0.4"
 	},
