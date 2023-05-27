@@ -22,6 +22,7 @@ module.exports = {
 		"global-require": "off",
 		"import/extensions": ["error", "ignorePackages"],
 		"import/no-anonymous-default-export": "error",
+		"import/no-duplicates": ["error", { considerQueryString: true, "prefer-inline": true }],
 		"import/order": ["error", { "newlines-between": "always" }],
 		"import/prefer-default-export": "off",
 		indent: ["error", "tab", { SwitchCase: 1 }],
