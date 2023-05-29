@@ -16,7 +16,10 @@ module.exports = {
 		indent: "off",
 		"no-void": ["error", { allowAsStatement: true }],
 		quotes: ["off"],
-		"@typescript-eslint/consistent-type-imports": ["error", { fixStyle: "inline-type-imports" }],
+		"@typescript-eslint/consistent-type-imports": [
+			"error",
+			{ disallowTypeAnnotations: false, fixStyle: "inline-type-imports" },
+		],
 		"@typescript-eslint/indent": ["error", "tab", { SwitchCase: 1 }],
 		"@typescript-eslint/member-delimiter-style": [
 			"error",
