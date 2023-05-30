@@ -1,15 +1,8 @@
-/**
- * @type {import("eslint").Linter.Config}
- */
+/** @type {import("eslint").Linter.Config} */
 module.exports = {
 	env: {
-		es6: true,
 		jest: true,
 		node: true,
-		es2017: true,
-		es2020: true,
-		es2021: true,
-		es2022: true,
 	},
 	extends: ["airbnb/base", "plugin:ava/recommended", "plugin:unicorn/recommended"],
 	plugins: ["ava", "unicorn"],
