@@ -25,7 +25,6 @@ module.exports = {
 			{ multiline: { delimiter: "semi", requireLast: true }, singleline: { delimiter: "semi", requireLast: false } },
 		],
 		"@typescript-eslint/no-import-type-side-effects": "error",
-		"@typescript-eslint/no-non-null-assertion": "off",
 		"@typescript-eslint/quotes": ["error", "double"],
 		"@typescript-eslint/type-annotation-spacing": "error",
 	},
