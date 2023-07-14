@@ -14,6 +14,7 @@ module.exports = {
 		indent: "off",
 		"no-void": ["error", { allowAsStatement: true }],
 		quotes: ["off"],
+		"@typescript-eslint/consistent-type-definitions": ["error", "type"],
 		"@typescript-eslint/consistent-type-imports": [
 			"error",
 			{ disallowTypeAnnotations: false, fixStyle: "inline-type-imports" },
