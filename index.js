@@ -44,6 +44,7 @@ module.exports = {
 		quotes: ["error", "double"],
 		"require-await": "error",
 		"space-before-function-paren": ["error", { anonymous: "always", named: "never", asyncArrow: "always" }],
+		"unicorn/consistent-destructuring": "error",
 		"unicorn/no-array-callback-reference": "off",
 		"unicorn/no-array-reduce": "off",
 		"unicorn/no-nested-ternary": "off",
