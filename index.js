@@ -46,7 +46,6 @@ module.exports = {
 		"space-before-function-paren": ["error", { anonymous: "always", named: "never", asyncArrow: "always" }],
 		"unicorn/consistent-destructuring": "error",
 		"unicorn/no-array-callback-reference": "off",
-		"unicorn/no-array-reduce": "off",
 		"unicorn/no-nested-ternary": "off",
 		"unicorn/no-null": "off",
 		"unicorn/prefer-switch": ["error", { emptyDefaultCase: "do-nothing-comment" }],
