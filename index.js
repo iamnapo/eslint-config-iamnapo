@@ -8,7 +8,13 @@ module.exports = {
 	plugins: ["ava", "unicorn", "@stylistic"],
 	reportUnusedDisableDirectives: true,
 	rules: {
-		"@stylistic/brace-style": "error",
+		"@stylistic/brace-style": [
+			"error",
+			"1tbs",
+			{
+				allowSingleLine: true,
+			},
+		],
 		"@stylistic/comma-dangle": ["error", "always-multiline"],
 		"@stylistic/comma-spacing": "error",
 		"@stylistic/func-call-spacing": "error",
