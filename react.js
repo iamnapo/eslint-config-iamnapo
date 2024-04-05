@@ -56,6 +56,6 @@ module.exports = {
 				ignoreFunctionalComponents: true,
 			},
 		],
-		"unicorn/filename-case": ["error", { cases: [Object] }],
+		"unicorn/filename-case": ["error", { cases: { kebabCase: true, pascalCase: true } }],
 	},
 };
