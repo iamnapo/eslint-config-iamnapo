@@ -14,23 +14,25 @@ npm i eslint-config-iamnapo -D
 
 ## Usage
 
-Add to your `.eslintrc.js` one of the available configs<sup>*</sup> like so:
+Add to your `eslint.config.js` one of the available configs<sup>*</sup> like so:
 
 ```js
-module.exports = {
-	extends: "iamnapo",
-	rules: {
-		// your overrides
+import eslintConfigIamnapo from "eslint-config-iamnapo";
+
+const config = [
+	{
+		files: [
+			"**/*.{c,m,}js",
+			// "**/*.{c,m,}jsx",
+			// "**/*.{c,m,}ts",
+			// "**/*.{c,m,}tsx"
+		],
 	},
-};
+	...eslintConfigIamnapo.configs.default,
+	// your overrides
+];
+
+export default config;
 ```
 
-<sup>*</sup>: `iamnapo`, `iamnapo/react`, `iamnapo/typescript`, `iamnapo/react-typescript`.
-
-### Monorepo support
-
-Due to [this](https://github.com/eslint/eslint/issues/3458) bug, if you are working on a monorepo, add to the top of `.eslintrc.js`:
-
-```js
-require("eslint-config-iamnapo/patch");
-```
+<sup>*</sup>: `default`, `react`, `typescript`, `react-typescript`.

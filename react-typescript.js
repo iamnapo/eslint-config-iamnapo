@@ -1,15 +1,15 @@
-const { parserOptions, rules, plugins } = require("./typescript.js");
+import { FlatCompat } from "@eslint/eslintrc";
 
-/** @type {import("eslint").Linter.Config} */
-module.exports = {
-	extends: [
-		"./react",
-		"airbnb-typescript",
-		"plugin:@typescript-eslint/recommended-type-checked",
-		"plugin:@typescript-eslint/stylistic-type-checked",
-		"plugin:@stylistic/disable-legacy",
-	],
-	plugins,
-	parserOptions,
-	rules,
-};
+import reactConfig from "./react.js";
+import typescriptConfig from "./typescript.js";
+
+const compat = new FlatCompat({ baseDirectory: import.meta.dirname });
+
+/** @type {import("eslint").Linter.FlatConfig[]} */
+const config = [
+	...reactConfig,
+	...compat.extends("airbnb-typescript"),
+	...typescriptConfig,
+];
+
+export default config;
