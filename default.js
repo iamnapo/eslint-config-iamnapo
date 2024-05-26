@@ -14,7 +14,6 @@ const config = [
 			"@stylistic": eslintPluginStylistic,
 		},
 		linterOptions: {
-			noInlineConfig: true,
 			reportUnusedDisableDirectives: "error",
 		},
 		languageOptions: {
