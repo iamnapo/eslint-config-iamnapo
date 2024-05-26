@@ -29,11 +29,8 @@
 		".": "./index.js"
 	},
 	"files": [
-		"index.js",
-		"default.js",
-		"typescript.js",
-		"react.js",
-		"react-typescript.js"
+		"configs",
+		"index.js"
 	],
 	"scripts": {
 		"lint": "eslint . --cache",

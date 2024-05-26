@@ -14,7 +14,7 @@ npm i eslint-config-iamnapo -D
 
 ## Usage
 
-Add to your `eslint.config.js` one of the available configs<sup>*</sup> like so:
+Add to your `eslint.config.js` one of the available configs (`default`, `react`, `typescript`, `react-typescript`) like so:
 
 ```js
 import eslintConfigIamnapo from "eslint-config-iamnapo";
@@ -22,8 +22,7 @@ import eslintConfigIamnapo from "eslint-config-iamnapo";
 const config = [
 	...eslintConfigIamnapo.configs.default.map(cfg => ({
 		...cfg,
-		files: ["**/*.{c,m,}js"], // or "**/*.{c,m,}js{x,}"
-		// files: ["**/*.{c,m,}ts"], // or "**/*.{c,m,}ts{x,}"
+		files: [eslintConfigIamnapo.filePatterns.default],
 	})),
 	// your overrides
 ];
@@ -31,4 +30,5 @@ const config = [
 export default config;
 ```
 
-<sup>*</sup>: `default`, `react`, `typescript`, `react-typescript`.
+>[!TIP]
+> `filePatterns` contains some helpful [patterns](https://eslint.org/docs/latest/use/configure/configuration-files#specifying-files-and-ignores) about each case, so you won’t have to figure them out yourself.

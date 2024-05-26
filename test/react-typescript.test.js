@@ -6,6 +6,7 @@ import { Linter } from "eslint";
 import eslintConfigIamnapo from "eslint-config-iamnapo";
 
 const config = eslintConfigIamnapo.configs["react-typescript"];
+const filePattern = eslintConfigIamnapo.filePatterns["react-typescript"];
 
 test("load config in eslint to validate all rule syntax is correct", async () => {
 	const linter = new Linter({ configType: "flat" });
@@ -18,15 +19,17 @@ test("load config in eslint to validate all rule syntax is correct", async () =>
 	`.replaceAll("\t", "");
 	const errorCount = await linter.verify(
 		code,
-		config.map(cfg => ({ ...cfg, files: ["**/*.{c,m,}tsx"] })),
+		config.map((cfg) => ({ ...cfg, files: [filePattern] })),
 		fileURLToPath(new URL("test.tsx", import.meta.url)),
 	);
 	assert.equal(errorCount.length, 6);
-	assert.ok(errorCount.every(({ ruleId }) =>
-		[
-			"@typescript-eslint/prefer-nullish-coalescing",
-			"@typescript-eslint/no-unsafe-assignment",
-			"@typescript-eslint/no-unsafe-call",
-			"@typescript-eslint/no-unsafe-member-access",
-		].includes(ruleId)));
+	assert.ok(
+		errorCount.every(({ ruleId }) =>
+			[
+				"@typescript-eslint/prefer-nullish-coalescing",
+				"@typescript-eslint/no-unsafe-assignment",
+				"@typescript-eslint/no-unsafe-call",
+				"@typescript-eslint/no-unsafe-member-access",
+			].includes(ruleId)),
+	);
 });
