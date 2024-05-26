@@ -1,4 +1,4 @@
-name: Publish to GitHub registry
+name: Publish
 
 on:
   release:
@@ -7,12 +7,24 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
     steps:
       - name: ⬇️ Checkout repo
         uses: actions/checkout@v4
 
-      - name: 🏗 Run replace-in-file
-        run: npx replace-in-file "eslint-config-iamnapo" "@iamnapo/eslint-config-iamnapo" package.json
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: "https://registry.npmjs.org"
+
+      - name: 🚀 Release to npm
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: ⎔ Setup node
         uses: actions/setup-node@v4
@@ -21,8 +33,10 @@ jobs:
           registry-url: "https://npm.pkg.github.com"
           scope: "@iamnapo"
 
-      - name: 🚀 Release
+      - name: 🏗 Run replace-in-file
+        run: npx replace-in-file "eslint-config-iamnapo" "@iamnapo/eslint-config-iamnapo" package.json
+
+      - name: 🚀 Release to GitHub
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
