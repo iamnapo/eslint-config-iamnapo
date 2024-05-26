@@ -20,15 +20,11 @@ Add to your `eslint.config.js` one of the available configs<sup>*</sup> like so:
 import eslintConfigIamnapo from "eslint-config-iamnapo";
 
 const config = [
-	{
-		files: [
-			"**/*.{c,m,}js",
-			// "**/*.{c,m,}jsx",
-			// "**/*.{c,m,}ts",
-			// "**/*.{c,m,}tsx"
-		],
-	},
-	...eslintConfigIamnapo.configs.default,
+	...eslintConfigIamnapo.configs.default.map(cfg => ({
+		...cfg,
+		files: ["**/*.{c,m,}js"], // or "**/*.{c,m,}js{x,}"
+		// files: ["**/*.{c,m,}ts"], // or "**/*.{c,m,}ts{x,}"
+	})),
 	// your overrides
 ];
 

@@ -6,10 +6,10 @@ import defaultConfig from "./default.js";
 
 const compat = new FlatCompat({ baseDirectory: import.meta.dirname });
 
-/** @type {import("eslint").Linter.FlatConfig[]} */
-const config = [
+/** @type {(reactSupport?: boolean) => import("eslint").Linter.FlatConfig[]} */
+const config = (reactSupport = false) => [
 	...defaultConfig,
-	...compat.extends("airbnb-typescript/base"),
+	...compat.extends(`airbnb-typescript${reactSupport ? "" : "/base"}`),
 	...tsEslint.configs.recommendedTypeChecked,
 	...tsEslint.configs.stylisticTypeChecked,
 	eslintPluginStylistic.configs["disable-legacy"],
@@ -37,4 +37,5 @@ const config = [
 	},
 ];
 
-export default config;
+export const configReact = config(true);
+export default config(false);

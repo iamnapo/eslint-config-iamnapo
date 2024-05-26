@@ -16,7 +16,7 @@ test("load config in eslint to validate all rule syntax is correct", async () =>
 	`.replaceAll("\t", "");
 	const errorCount = await linter.verify(
 		code,
-		[{ files: ["**/*.{c,m,}ts"] }, ...config],
+		config.map(cfg => ({ ...cfg, files: ["**/*.{c,m,}ts"] })),
 		fileURLToPath(new URL("test.ts", import.meta.url)),
 	);
 	assert.equal(errorCount.length, 1);

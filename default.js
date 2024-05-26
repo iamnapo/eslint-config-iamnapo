@@ -14,7 +14,8 @@ const config = [
 			"@stylistic": eslintPluginStylistic,
 		},
 		linterOptions: {
-			reportUnusedDisableDirectives: true,
+			noInlineConfig: true,
+			reportUnusedDisableDirectives: "error",
 		},
 		languageOptions: {
 			ecmaVersion: 15,
