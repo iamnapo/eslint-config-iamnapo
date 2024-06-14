@@ -38,4 +38,4 @@ const config = (reactSupport = false) => [
 ];
 
 export const configReact = config(true);
-export default config(false);
+export default config(false).map(cfg => ({ ...cfg, name: "iamnapo/typescript" }));

@@ -1,3 +1,4 @@
+import globals from "globals";
 import { FlatCompat } from "@eslint/eslintrc";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import eslintPluginStylistic from "@stylistic/eslint-plugin";
@@ -18,6 +19,7 @@ const config = [
 		},
 		languageOptions: {
 			ecmaVersion: 15,
+			globals: globals.nodeBuiltin,
 		},
 	},
 	{
@@ -114,4 +116,4 @@ const config = [
 	},
 ];
 
-export default config;
+export default config.map(cfg => ({ ...cfg, name: "iamnapo/default" }));

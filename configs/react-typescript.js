@@ -7,4 +7,4 @@ const config = [
 	...typescriptConfig,
 ];
 
-export default config;
+export default config.map(cfg => ({ ...cfg, name: "iamnapo/react-typescript" }));

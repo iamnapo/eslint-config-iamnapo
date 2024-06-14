@@ -21,9 +21,7 @@ const config = [
 	},
 	{
 		languageOptions: {
-			globals: {
-				...globals.browser,
-			},
+			globals: globals.browser,
 			parserOptions: {
 				ecmaVersion: 15,
 				ecmaFeatures: {
@@ -84,4 +82,4 @@ const config = [
 	},
 ];
 
-export default config;
+export default config.map(cfg => ({ ...cfg, name: "iamnapo/react" }));
