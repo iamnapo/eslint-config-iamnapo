@@ -5,7 +5,7 @@ import eslintPluginStylistic from "@stylistic/eslint-plugin";
 
 const compat = new FlatCompat({ baseDirectory: import.meta.dirname });
 
-/** @type {import("eslint").Linter.FlatConfig[]} */
+/** @type {import("eslint").Linter.Config[]} */
 const config = [
 	...compat.extends("airbnb/base"),
 	eslintPluginUnicorn.configs["flat/recommended"],

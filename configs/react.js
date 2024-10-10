@@ -8,14 +8,15 @@ import defaultConfig from "./default.js";
 
 const compat = new FlatCompat({ baseDirectory: import.meta.dirname });
 
-/** @type {import("eslint").Linter.FlatConfig[]} */
+/** @type {import("eslint").Linter.Config[]} */
 const config = [
-	...compat.extends("airbnb", "airbnb/hooks", "plugin:react/recommended", "plugin:jsx-a11y/recommended"),
+	...compat.extends("airbnb", "airbnb/hooks").map(({ plugins, ...cfg }) => cfg),
+	eslintPluginReact.configs.flat.recommended,
+	eslintPluginReact.configs.flat["jsx-runtime"],
+	eslintPluginJsxA11y.flatConfigs.recommended,
 	...defaultConfig,
 	{
 		plugins: {
-			react: eslintPluginReact,
-			"jsx-a11y": eslintPluginJsxA11y,
 			"react-hooks": eslintPluginReactHooks,
 		},
 	},
@@ -66,10 +67,8 @@ const config = [
 					reservedFirst: true,
 				},
 			],
-			"react/jsx-uses-react": "off",
 			"react/no-array-index-key": "off",
 			"react/no-unstable-nested-components": ["error", { allowAsProps: true }],
-			"react/react-in-jsx-scope": "off",
 			"react/require-default-props": [
 				"error",
 				{

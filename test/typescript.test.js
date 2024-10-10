@@ -18,7 +18,7 @@ test("load config in eslint to validate all rule syntax is correct", async () =>
 	const errorCount = await linter.verify(
 		code,
 		config.map((cfg) => ({ ...cfg, files: [filePattern] })),
-		fileURLToPath(new URL("test.ts", import.meta.url)),
+		fileURLToPath(new URL("typescript.test.ts", import.meta.url)),
 	);
 	assert.equal(errorCount.length, 1);
 	assert.ok(errorCount.every(({ ruleId }) => ["@typescript-eslint/prefer-nullish-coalescing"].includes(ruleId)));

@@ -20,7 +20,7 @@ test("load config in eslint to validate all rule syntax is correct", async () =>
 	const errorCount = await linter.verify(
 		code,
 		config.map((cfg) => ({ ...cfg, files: [filePattern] })),
-		fileURLToPath(new URL("test.tsx", import.meta.url)),
+		fileURLToPath(new URL("react-typescript.test.tsx", import.meta.url)),
 	);
 	assert.equal(errorCount.length, 6);
 	assert.ok(

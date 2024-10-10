@@ -6,10 +6,17 @@ import defaultConfig from "./default.js";
 
 const compat = new FlatCompat({ baseDirectory: import.meta.dirname });
 
-/** @type {(reactSupport?: boolean) => import("eslint").Linter.FlatConfig[]} */
+/** @type {(reactSupport?: boolean) => import("eslint").Linter.Config[]} */
 const config = (reactSupport = false) => [
 	...defaultConfig,
-	...compat.extends(`airbnb-typescript${reactSupport ? "" : "/base"}`),
+	...compat.extends(`airbnb-typescript${reactSupport ? "" : "/base"}`).map(({ plugins, ...cfg }) => {
+		if (cfg.rules?.["@typescript-eslint/no-throw-literal"]) {
+			cfg.rules["@typescript-eslint/only-throw-error"] = cfg.rules["@typescript-eslint/no-throw-literal"];
+			delete cfg.rules?.["@typescript-eslint/no-throw-literal"];
+		}
+
+		return cfg;
+	}),
 	...tsEslint.configs.recommendedTypeChecked,
 	...tsEslint.configs.stylisticTypeChecked,
 	eslintPluginStylistic.configs["disable-legacy"],
@@ -17,7 +24,7 @@ const config = (reactSupport = false) => [
 		languageOptions: {
 			ecmaVersion: 15,
 			parserOptions: {
-				EXPERIMENTAL_useProjectService: true,
+				projectService: true,
 			},
 		},
 	},
