@@ -1,6 +1,6 @@
 {
 	"name": "eslint-config-iamnapo",
-	"version": "36.0.0",
+	"version": "37.0.0",
 	"description": "ESLint shareable config for iamnapo’s coding style",
 	"keywords": [
 		"eslint",
@@ -38,7 +38,7 @@
 	},
 	"dependencies": {
 		"@eslint/eslintrc": "^3.1.0",
-  	"@stylistic/eslint-plugin": "^2.9.0",
+		"@stylistic/eslint-plugin": "^2.9.0",
 		"eslint-config-airbnb": "^19.0.4",
 		"eslint-config-airbnb-typescript": "^18.0.0",
 		"eslint-plugin-import": "^2.31.0",
