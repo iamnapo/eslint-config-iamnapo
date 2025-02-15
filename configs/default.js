@@ -90,7 +90,7 @@ const config = (jsx = false) => [
 			"@stylistic/wrap-iife": ["error", "inside", { functionPrototypeMethods: true }],
 			"array-callback-return": ["error", { allowImplicit: true }],
 			"func-names": ["error", "never"],
-			"import/extensions": ["error", "ignorePackages"],
+			"import/extensions": ["error", "ignorePackages", { ts: "never", tsx: "never" }],
 			"import/no-anonymous-default-export": "error",
 			"import/no-duplicates": ["error", { considerQueryString: true, "prefer-inline": true }],
 			"import/order": ["error", { "newlines-between": "always" }],
