@@ -12,7 +12,7 @@ test("load config in eslint to validate all rule syntax is correct", async () =>
 	const linter = new Linter({ configType: "flat" });
 	const code = `
 		const foo = 1;
-		const bar = () => {};
+		const bar = (a) => console.log(a);
 		bar(foo);
 	`.replaceAll("\t", "");
 	const errorCount = await linter.verify(
