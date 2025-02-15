@@ -19,6 +19,7 @@ const config = [
 	},
 	{
 		rules: {
+			"import/no-unresolved": "off",
 			"no-unused-vars": "off",
 			"no-void": ["error", { allowAsStatement: true }],
 			"require-await": "off",
