@@ -60,6 +60,7 @@ const config = [
 					reservedFirst: true,
 				},
 			],
+			"react/no-unknown-property": "error",
 			"react/no-unstable-nested-components": ["error", { allowAsProps: true }],
 			"react/require-default-props": [
 				"error",

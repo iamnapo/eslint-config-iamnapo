@@ -19,7 +19,9 @@ const config = [
 	},
 	{
 		rules: {
+			"no-unused-vars": "off",
 			"no-void": ["error", { allowAsStatement: true }],
+			"require-await": "off",
 			"@stylistic/type-annotation-spacing": "error",
 			"@typescript-eslint/consistent-type-definitions": ["error", "type"],
 			"@typescript-eslint/consistent-type-imports": [
@@ -27,10 +29,15 @@ const config = [
 				{ disallowTypeAnnotations: false, fixStyle: "inline-type-imports" },
 			],
 			"@typescript-eslint/no-import-type-side-effects": "error",
+			"@typescript-eslint/no-unused-vars": [
+				"error",
+				{ args: "after-used", ignoreRestSiblings: true, vars: "all", varsIgnorePattern: "^_" },
+			],
 			"@typescript-eslint/prefer-nullish-coalescing": [
 				"error",
 				{ ignoreConditionalTests: true, ignorePrimitives: { number: true, bigint: true } },
 			],
+			"@typescript-eslint/require-await": "error",
 		},
 	},
 ];
