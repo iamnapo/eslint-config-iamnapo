@@ -4,8 +4,8 @@ import eslintPluginStylistic from "@stylistic/eslint-plugin";
 import eslintPluginImport from "eslint-plugin-import";
 import js from "@eslint/js";
 
-/** @type {import("eslint").Linter.Config[]} */
-const config = [
+/** @type {(jsx?: boolean) => import("eslint").Linter.Config[]} */
+const config = (jsx = false) => [
 	js.configs.recommended,
 	eslintPluginImport.flatConfigs.recommended,
 	eslintPluginUnicorn.configs["flat/recommended"],
@@ -17,6 +17,7 @@ const config = [
 		quoteProps: "as-needed",
 		quotes: "double",
 		semi: true,
+		jsx,
 	}),
 	{
 		linterOptions: {
@@ -116,4 +117,6 @@ const config = [
 	},
 ];
 
-export default config.map((cfg) => ({ ...cfg, name: "iamnapo/default" }));
+export const configWithJsx = config(true);
+
+export default config().map((cfg) => ({ ...cfg, name: "iamnapo/default" }));

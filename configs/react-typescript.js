@@ -3,8 +3,8 @@ import typescriptConfig from "./typescript.js";
 
 /** @type {import("eslint").Linter.Config[]} */
 const config = [
-	...typescriptConfig,
 	...reactConfig,
+	...typescriptConfig,
 	{
 		settings: {
 			"import/resolver": {

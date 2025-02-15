@@ -3,7 +3,7 @@ import eslintPluginReact from "eslint-plugin-react";
 import eslintPluginJsxA11y from "eslint-plugin-jsx-a11y";
 import eslintPluginReactHooks from "eslint-plugin-react-hooks";
 
-import defaultConfig from "./default.js";
+import { configWithJsx as defaultConfig } from "./default.js";
 
 /** @type {import("eslint").Linter.Config[]} */
 const config = [
