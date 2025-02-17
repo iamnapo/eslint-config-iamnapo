@@ -56,6 +56,7 @@ const config = (jsx = false) => [
 					ignoreTemplateLiterals: true,
 				},
 			],
+			"@stylistic/max-statements-per-line": "off",
 			"@stylistic/no-extra-semi": "error",
 			"@stylistic/no-mixed-operators": [
 				"error",
