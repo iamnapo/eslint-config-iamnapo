@@ -30,8 +30,6 @@ const config = (jsx = false) => [
 	},
 	{
 		rules: {
-			"import/no-named-as-default": "off", // TODO: Re-enable when fixed
-			"import/no-named-as-default-member": "off", // TODO: Re-enable when fixed
 			"@stylistic/brace-style": [
 				"error",
 				"1tbs",
@@ -96,6 +94,8 @@ const config = (jsx = false) => [
 			"import/namespace": "off",
 			"import/no-anonymous-default-export": "error",
 			"import/no-duplicates": ["error", { considerQueryString: true, "prefer-inline": true }],
+			"import/no-named-as-default": "off",
+			"import/no-named-as-default-member": "off",
 			"import/order": ["error", { "newlines-between": "always" }],
 			"import/prefer-default-export": "off",
 			"no-implicit-coercion": "error",
