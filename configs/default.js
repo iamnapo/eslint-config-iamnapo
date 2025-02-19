@@ -2,13 +2,13 @@ import globals from "globals";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import eslintPluginStylistic from "@stylistic/eslint-plugin";
 import eslintPluginImport from "eslint-plugin-import";
-import js from "@eslint/js";
+import eslintJs from "@eslint/js";
 
 /** @type {(jsx?: boolean) => import("eslint").Linter.Config[]} */
 const config = (jsx = false) => [
-	js.configs.recommended,
+	eslintJs.configs.recommended,
 	eslintPluginImport.flatConfigs.recommended,
-	eslintPluginUnicorn.configs["flat/recommended"],
+	eslintPluginUnicorn.configs.recommended,
 	eslintPluginStylistic.configs.customize({
 		arrowParens: "always",
 		commaDangle: "always-multiline",
@@ -91,7 +91,9 @@ const config = (jsx = false) => [
 			"@stylistic/wrap-iife": ["error", "inside", { functionPrototypeMethods: true }],
 			"array-callback-return": ["error", { allowImplicit: true }],
 			"func-names": ["error", "never"],
+			"import/default": "off",
 			"import/extensions": ["error", "ignorePackages", { ts: "never", tsx: "never" }],
+			"import/namespace": "off",
 			"import/no-anonymous-default-export": "error",
 			"import/no-duplicates": ["error", { considerQueryString: true, "prefer-inline": true }],
 			"import/order": ["error", { "newlines-between": "always" }],
