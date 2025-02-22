@@ -24,7 +24,7 @@ const config = (jsx = false) => [
 			reportUnusedDisableDirectives: "error",
 		},
 		languageOptions: {
-			ecmaVersion: 15,
+			ecmaVersion: "latest",
 			globals: globals.nodeBuiltin,
 		},
 	},
