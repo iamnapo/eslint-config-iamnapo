@@ -9,22 +9,12 @@ import { configWithJsx as defaultConfig } from "./default.js";
 const config = [
 	eslintPluginReact.configs.flat.recommended,
 	eslintPluginReact.configs.flat["jsx-runtime"],
+	eslintPluginReactHooks.configs["recommended-latest"],
 	eslintPluginJsxA11y.flatConfigs.recommended,
 	...defaultConfig,
 	{
-		plugins: {
-			"react-hooks": eslintPluginReactHooks,
-		},
-	},
-	{
 		languageOptions: {
 			globals: globals.browser,
-			parserOptions: {
-				ecmaVersion: 15,
-				ecmaFeatures: {
-					jsx: true,
-				},
-			},
 		},
 		settings: {
 			react: {
@@ -35,8 +25,6 @@ const config = [
 	{
 		rules: {
 			"@stylistic/jsx-curly-brace-presence": ["error", { props: "never", children: "always" }],
-			"react-hooks/rules-of-hooks": "error",
-			"react-hooks/exhaustive-deps": "warn",
 			"react/display-name": "off",
 			"react/hook-use-state": "error",
 			"react/jsx-indent": ["error", "tab", { checkAttributes: true, indentLogicalExpressions: true }],

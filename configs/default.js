@@ -10,7 +10,7 @@ const config = (jsx = false) => [
 	eslintPluginImport.flatConfigs.recommended,
 	eslintPluginUnicorn.configs.recommended,
 	eslintPluginStylistic.configs.customize({
-		arrowParens: "always",
+		arrowParens: true,
 		commaDangle: "always-multiline",
 		indent: "tab",
 		braceStyle: "1tbs",

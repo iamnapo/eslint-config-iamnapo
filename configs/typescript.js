@@ -11,7 +11,6 @@ const config = [
 	...tsEslint.configs.stylisticTypeChecked,
 	{
 		languageOptions: {
-			ecmaVersion: 15,
 			parserOptions: {
 				projectService: true,
 			},
