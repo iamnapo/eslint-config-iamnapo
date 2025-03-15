@@ -40,7 +40,7 @@
 		"test": "npm run lint && node test/run.js"
 	},
 	"dependencies": {
-		"@eslint/js": "^9.21.0",
+		"@eslint/js": "^9.22.0",
 		"@stylistic/eslint-plugin": "^4.2.0",
 		"eslint-plugin-import": "^2.31.0",
 		"eslint-plugin-jsx-a11y": "^6.10.2",
@@ -48,10 +48,10 @@
 		"eslint-plugin-react-hooks": "^5.2.0",
 		"eslint-plugin-unicorn": "^57.0.0",
 		"globals": "^16.0.0",
-		"typescript-eslint": "^8.26.0"
+		"typescript-eslint": "^8.26.1"
 	},
 	"devDependencies": {
-		"eslint": "^9.21.0",
+		"eslint": "^9.22.0",
 		"typescript": "^5.8.2"
 	},
 	"peerDependencies": {
