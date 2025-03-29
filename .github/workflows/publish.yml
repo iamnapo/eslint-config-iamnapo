@@ -22,7 +22,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: pnpm
           registry-url: "https://registry.npmjs.org"
 
       - name: 🚀 Release to npm
@@ -34,7 +33,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: pnpm
           registry-url: "https://npm.pkg.github.com"
           scope: "@iamnapo"
 
