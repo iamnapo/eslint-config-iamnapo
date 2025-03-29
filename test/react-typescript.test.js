@@ -23,13 +23,10 @@ test("load config in eslint to validate all rule syntax is correct", async () =>
 		fileURLToPath(new URL("react-typescript.test.tsx", import.meta.url)),
 	);
 	assert.equal(errorCount.length, 6);
-	assert.ok(
-		errorCount.every(({ ruleId }) =>
-			[
-				"@typescript-eslint/prefer-nullish-coalescing",
-				"@typescript-eslint/no-unsafe-assignment",
-				"@typescript-eslint/no-unsafe-call",
-				"@typescript-eslint/no-unsafe-member-access",
-			].includes(ruleId)),
-	);
+	assert.ok(errorCount.every(({ ruleId }) => [
+		"@typescript-eslint/prefer-nullish-coalescing",
+		"@typescript-eslint/no-unsafe-assignment",
+		"@typescript-eslint/no-unsafe-call",
+		"@typescript-eslint/no-unsafe-member-access",
+	].includes(ruleId)));
 });

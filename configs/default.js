@@ -20,23 +20,12 @@ const config = (jsx = false) => [
 		jsx,
 	}),
 	{
-		linterOptions: {
-			reportUnusedDisableDirectives: "error",
-		},
-		languageOptions: {
-			ecmaVersion: "latest",
-			globals: globals.nodeBuiltin,
-		},
+		linterOptions: { reportUnusedDisableDirectives: "error" },
+		languageOptions: { ecmaVersion: "latest", globals: globals.nodeBuiltin },
 	},
 	{
 		rules: {
-			"@stylistic/brace-style": [
-				"error",
-				"1tbs",
-				{
-					allowSingleLine: true,
-				},
-			],
+			"@stylistic/brace-style": ["error", "1tbs", { allowSingleLine: true }],
 			"@stylistic/comma-spacing": "error",
 			"@stylistic/func-call-spacing": "error",
 			"@stylistic/function-paren-newline": ["error", "consistent"],
@@ -75,16 +64,10 @@ const config = (jsx = false) => [
 			],
 			"@stylistic/no-multiple-empty-lines": ["error", { max: 1 }],
 			"@stylistic/object-curly-spacing": ["error", "always"],
-			"@stylistic/padding-line-between-statements": [
-				"error",
-				{ blankLine: "always", prev: "multiline-block-like", next: "*" },
-			],
+			"@stylistic/padding-line-between-statements": ["error", { blankLine: "always", prev: "multiline-block-like", next: "*" }],
 			"@stylistic/quotes": ["error", "double", { allowTemplateLiterals: "avoidEscape" }],
 			"@stylistic/space-before-blocks": "error",
-			"@stylistic/space-before-function-paren": [
-				"error",
-				{ anonymous: "always", named: "never", asyncArrow: "always" },
-			],
+			"@stylistic/space-before-function-paren": ["error", { anonymous: "always", named: "never", asyncArrow: "always" }],
 			"@stylistic/space-infix-ops": "error",
 			"@stylistic/wrap-iife": ["error", "inside", { functionPrototypeMethods: true }],
 			"array-callback-return": ["error", { allowImplicit: true }],
@@ -103,11 +86,9 @@ const config = (jsx = false) => [
 			"no-plusplus": ["error", { allowForLoopAfterthoughts: true }],
 			"no-restricted-exports": ["error", { restrictedNamedExports: ["then"] }],
 			"no-return-assign": ["error", "always"],
-			"no-unused-vars": [
-				"error",
-				{ args: "after-used", ignoreRestSiblings: true, vars: "all", varsIgnorePattern: "^_" },
-			],
+			"no-unused-vars": ["error", { args: "after-used", ignoreRestSiblings: true, vars: "all", varsIgnorePattern: "^_" }],
 			"no-use-before-define": ["error", { functions: false }],
+			"prefer-const": ["error", { ignoreReadBeforeAssign: true }],
 			"prefer-regex-literals": "error",
 			"require-await": "error",
 			"unicorn/consistent-destructuring": "error",

@@ -12,16 +12,7 @@ const config = [
 	eslintPluginReactHooks.configs["recommended-latest"],
 	eslintPluginJsxA11y.flatConfigs.recommended,
 	...defaultConfig,
-	{
-		languageOptions: {
-			globals: globals.browser,
-		},
-		settings: {
-			react: {
-				version: "999.999.999",
-			},
-		},
-	},
+	{ languageOptions: { globals: globals.browser }, settings: { react: { version: "999.999.999" } } },
 	{
 		rules: {
 			"@stylistic/jsx-curly-brace-presence": ["error", { props: "never", children: "always" }],
@@ -29,34 +20,16 @@ const config = [
 			"react/hook-use-state": "error",
 			"react/jsx-indent": ["error", "tab", { checkAttributes: true, indentLogicalExpressions: true }],
 			"react/jsx-indent-props": ["error", "tab"],
-			"react/jsx-key": [
-				"error",
-				{
-					checkFragmentShorthand: true,
-					checkKeyMustBeforeSpread: true,
-					warnOnDuplicates: true,
-				},
-			],
+			"react/jsx-key": ["error", { checkFragmentShorthand: true, checkKeyMustBeforeSpread: true, warnOnDuplicates: true }],
 			"react/jsx-no-duplicate-props": ["error", { ignoreCase: false }],
 			"react/jsx-no-useless-fragment": "error",
 			"react/jsx-sort-props": [
 				"error",
-				{
-					callbacksLast: true,
-					shorthandFirst: true,
-					noSortAlphabetically: true,
-					reservedFirst: true,
-				},
+				{ callbacksLast: true, shorthandFirst: true, noSortAlphabetically: true, reservedFirst: true },
 			],
 			"react/no-unknown-property": "error",
 			"react/no-unstable-nested-components": ["error", { allowAsProps: true }],
-			"react/require-default-props": [
-				"error",
-				{
-					forbidDefaultForRequired: true,
-					ignoreFunctionalComponents: true,
-				},
-			],
+			"react/require-default-props": ["error", { forbidDefaultForRequired: true, ignoreFunctionalComponents: true }],
 			"unicorn/filename-case": ["error", { cases: { kebabCase: true, pascalCase: true } }],
 		},
 	},

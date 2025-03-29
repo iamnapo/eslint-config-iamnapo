@@ -9,13 +9,7 @@ const config = [
 	eslintPluginImport.flatConfigs.typescript,
 	...tsEslint.configs.recommendedTypeChecked,
 	...tsEslint.configs.stylisticTypeChecked,
-	{
-		languageOptions: {
-			parserOptions: {
-				projectService: true,
-			},
-		},
-	},
+	{ languageOptions: { parserOptions: { projectService: true } } },
 	{
 		rules: {
 			"import/no-unresolved": "off",
