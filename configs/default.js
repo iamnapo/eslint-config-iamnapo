@@ -1,13 +1,13 @@
 import eslintJs from "@eslint/js";
 import eslintPluginStylistic from "@stylistic/eslint-plugin";
-import eslintPluginImport from "eslint-plugin-import";
+import eslintPluginImportX from "eslint-plugin-import-x";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import globals from "globals";
 
 /** @type {(jsx?: boolean) => import("eslint").Linter.Config[]} */
 const config = (jsx = false) => [
 	eslintJs.configs.recommended,
-	eslintPluginImport.flatConfigs.recommended,
+	eslintPluginImportX.flatConfigs.recommended,
 	eslintPluginUnicorn.configs.recommended,
 	eslintPluginStylistic.configs.customize({
 		arrowParens: true,
@@ -78,34 +78,34 @@ const config = (jsx = false) => [
 			"@stylistic/wrap-iife": ["error", "inside", { functionPrototypeMethods: true }],
 			"array-callback-return": ["error", { allowImplicit: true }],
 			"func-names": ["error", "never"],
-			"import/default": "off",
-			"import/extensions": ["error", "ignorePackages", { ts: "never", tsx: "never" }],
-			"import/namespace": "off",
-			"import/no-anonymous-default-export": "error",
-			"import/no-duplicates": ["error", { considerQueryString: true, "prefer-inline": true }],
-			"import/no-named-as-default": "off",
-			"import/no-named-as-default-member": "off",
-			"import/order": [
+			"import-x/default": "off",
+			"import-x/extensions": ["error", "ignorePackages"],
+			"import-x/namespace": "off",
+			"import-x/no-anonymous-default-export": "error",
+			"import-x/no-duplicates": ["error", { considerQueryString: true, "prefer-inline": true }],
+			"import-x/no-named-as-default": "off",
+			"import-x/no-named-as-default-member": "off",
+			"import-x/order": [
 				"error",
 				{
 					"newlines-between": "always",
 					distinctGroup: true,
-					named: true,
+					named: { enabled: true, types: "types-last" },
 					alphabetize: { order: "asc", orderImportKind: "asc", caseInsensitive: true },
 					pathGroupsExcludedImportTypes: [],
 					groups: ["builtin", "external", "internal", "parent", "sibling", "index", "type"],
 					// sortTypesGroup: true,
 					pathGroups: [
-						{ pattern: "@assets/**", group: "internal" },
-						{ pattern: "@constants/**", group: "internal", position: "after" },
-						{ pattern: "@components/**", group: "internal", position: "after" },
-						{ pattern: "@hooks/**", group: "internal", position: "after" },
-						{ pattern: "@styles/**", group: "internal", position: "after" },
-						{ pattern: "@utils/**", group: "internal", position: "after" },
+						{ pattern: "#assets/**", group: "internal" },
+						{ pattern: "#constants/**", group: "internal", position: "after" },
+						{ pattern: "#components/**", group: "internal", position: "after" },
+						{ pattern: "#hooks/**", group: "internal", position: "after" },
+						{ pattern: "#styles/**", group: "internal", position: "after" },
+						{ pattern: "#utils/**", group: "internal", position: "after" },
 					],
 				},
 			],
-			"import/prefer-default-export": "off",
+			"import-x/prefer-default-export": "off",
 			"no-implicit-coercion": "error",
 			"no-negated-condition": "error",
 			"no-plusplus": ["error", { allowForLoopAfterthoughts: true }],

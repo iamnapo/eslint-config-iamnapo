@@ -1,4 +1,4 @@
-import eslintPluginImport from "eslint-plugin-import";
+import eslintPluginImportX from "eslint-plugin-import-x";
 import tsEslint from "typescript-eslint";
 
 import defaultConfig from "./default.js";
@@ -6,13 +6,18 @@ import defaultConfig from "./default.js";
 /** @type {import("eslint").Linter.Config[]} */
 const config = [
 	...defaultConfig,
-	eslintPluginImport.flatConfigs.typescript,
 	...tsEslint.configs.recommendedTypeChecked,
 	...tsEslint.configs.stylisticTypeChecked,
-	{ languageOptions: { parserOptions: { projectService: true } } },
+	eslintPluginImportX.flatConfigs.recommended,
+	eslintPluginImportX.flatConfigs.typescript,
+	{
+		settings: { "import-x/resolver": { node: true, typescript: true } },
+		languageOptions: { parserOptions: { projectService: true } },
+	},
 	{
 		rules: {
-			"import/no-unresolved": "off",
+			"import-x/extensions": ["error", "ignorePackages", { ts: "never" }],
+			"import-x/no-unresolved": "off",
 			"no-unused-vars": "off",
 			"no-void": ["error", { allowAsStatement: true }],
 			"require-await": "off",

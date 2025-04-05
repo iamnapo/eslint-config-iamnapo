@@ -6,8 +6,10 @@ const config = [
 	...reactConfig,
 	...typescriptConfig,
 	{
-		settings: { "import/resolver": { node: { extensions: [".mjs", ".js", ".jsx", ".json", ".ts", ".tsx", ".d.ts"] } } },
-		rules: { "react/jsx-filename-extension": ["error", { extensions: [".jsx", ".tsx"] }] },
+		rules: {
+			"import-x/extensions": ["error", "ignorePackages", { ts: "never", tsx: "never" }],
+			"react/jsx-filename-extension": ["error", { extensions: [".jsx", ".tsx"] }],
+		},
 	},
 ];
 

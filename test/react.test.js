@@ -19,7 +19,7 @@ test("load config in eslint to validate all rule syntax is correct", async () =>
 	`.replaceAll("\t", "");
 	const errorCount = await linter.verify(
 		code,
-		[...config.map((cfg) => ({ ...cfg, files: [filePattern] })), { rules: { "import/no-unresolved": "off" } }],
+		[...config.map((cfg) => ({ ...cfg, files: [filePattern] })), { rules: { "import-x/no-unresolved": "off" } }],
 		fileURLToPath(new URL("test.jsx", import.meta.url)),
 	);
 	assert.equal(errorCount.length, 0);
