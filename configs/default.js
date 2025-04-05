@@ -93,7 +93,7 @@ const config = (jsx = false) => [
 					named: true,
 					alphabetize: { order: "asc", orderImportKind: "asc", caseInsensitive: true },
 					pathGroupsExcludedImportTypes: [],
-					groups: ["type", "builtin", "external", "internal", "parent", "sibling", "index"],
+					groups: ["builtin", "external", "internal", "parent", "sibling", "index", "type"],
 					// sortTypesGroup: true,
 					pathGroups: [
 						{ pattern: "@assets/**", group: "internal" },
