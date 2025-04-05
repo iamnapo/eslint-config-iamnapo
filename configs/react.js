@@ -20,7 +20,10 @@ const config = [
 			"react/hook-use-state": "error",
 			"react/jsx-indent": ["error", "tab", { checkAttributes: true, indentLogicalExpressions: true }],
 			"react/jsx-indent-props": ["error", "tab"],
-			"react/jsx-key": ["error", { checkFragmentShorthand: true, checkKeyMustBeforeSpread: true, warnOnDuplicates: true }],
+			"react/jsx-key": [
+				"error",
+				{ checkFragmentShorthand: true, checkKeyMustBeforeSpread: true, warnOnDuplicates: true },
+			],
 			"react/jsx-no-duplicate-props": ["error", { ignoreCase: false }],
 			"react/jsx-no-useless-fragment": "error",
 			"react/jsx-sort-props": [

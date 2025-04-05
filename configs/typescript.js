@@ -18,10 +18,7 @@ const config = [
 			"require-await": "off",
 			"@stylistic/type-annotation-spacing": "error",
 			"@typescript-eslint/consistent-type-definitions": ["error", "type"],
-			"@typescript-eslint/consistent-type-imports": [
-				"error",
-				{ disallowTypeAnnotations: false, fixStyle: "inline-type-imports" },
-			],
+			"@typescript-eslint/consistent-type-imports": "error",
 			"@typescript-eslint/no-import-type-side-effects": "error",
 			"@typescript-eslint/no-unused-vars": [
 				"error",
