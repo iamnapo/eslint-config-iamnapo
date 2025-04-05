@@ -1,5 +1,5 @@
-import tsEslint from "typescript-eslint";
 import eslintPluginImport from "eslint-plugin-import";
+import tsEslint from "typescript-eslint";
 
 import defaultConfig from "./default.js";
 

@@ -1,5 +1,5 @@
-import test from "node:test";
 import { strict as assert } from "node:assert";
+import test from "node:test";
 import { fileURLToPath } from "node:url";
 
 import { Linter } from "eslint";

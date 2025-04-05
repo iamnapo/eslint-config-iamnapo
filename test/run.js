@@ -1,7 +1,7 @@
-import { spec } from "node:test/reporters";
-import { run } from "node:test";
-import process from "node:process";
 import { rm, writeFile } from "node:fs/promises";
+import process from "node:process";
+import { run } from "node:test";
+import { spec } from "node:test/reporters";
 import { fileURLToPath } from "node:url";
 
 await writeFile(

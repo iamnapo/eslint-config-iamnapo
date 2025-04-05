@@ -1,7 +1,7 @@
-import globals from "globals";
-import eslintPluginReact from "eslint-plugin-react";
 import eslintPluginJsxA11y from "eslint-plugin-jsx-a11y";
+import eslintPluginReact from "eslint-plugin-react";
 import eslintPluginReactHooks from "eslint-plugin-react-hooks";
+import globals from "globals";
 
 import { configWithJsx as defaultConfig } from "./default.js";
 

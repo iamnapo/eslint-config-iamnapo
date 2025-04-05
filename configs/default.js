@@ -1,8 +1,8 @@
-import globals from "globals";
-import eslintPluginUnicorn from "eslint-plugin-unicorn";
+import eslintJs from "@eslint/js";
 import eslintPluginStylistic from "@stylistic/eslint-plugin";
 import eslintPluginImport from "eslint-plugin-import";
-import eslintJs from "@eslint/js";
+import eslintPluginUnicorn from "eslint-plugin-unicorn";
+import globals from "globals";
 
 /** @type {(jsx?: boolean) => import("eslint").Linter.Config[]} */
 const config = (jsx = false) => [

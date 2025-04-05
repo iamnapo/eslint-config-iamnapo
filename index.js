@@ -1,7 +1,7 @@
 import defaultConfig from "./configs/default.js";
+import reactTypescriptConfig from "./configs/react-typescript.js";
 import reactConfig from "./configs/react.js";
 import typescriptConfig from "./configs/typescript.js";
-import reactTypescriptConfig from "./configs/react-typescript.js";
 
 const eslintConfigIamnapo = {
 	configs: {
