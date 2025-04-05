@@ -82,7 +82,7 @@ const config = (jsx = false) => [
 			"import/extensions": ["error", "ignorePackages", { ts: "never", tsx: "never" }],
 			"import/namespace": "off",
 			"import/no-anonymous-default-export": "error",
-			"import/no-duplicates": ["error", { considerQueryString: true, "prefer-inline": true }],
+			"import/no-duplicates": ["error", { considerQueryString: true }],
 			"import/no-named-as-default": "off",
 			"import/no-named-as-default-member": "off",
 			"import/order": [
