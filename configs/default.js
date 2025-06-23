@@ -125,6 +125,7 @@ const config = (jsx = false) => [
 			"unicorn/no-null": "off",
 			"unicorn/prefer-switch": ["error", { emptyDefaultCase: "do-nothing-comment" }],
 			"unicorn/prevent-abbreviations": "off",
+			"unicorn/prefer-import-meta-properties": "error",
 		},
 	},
 ];
