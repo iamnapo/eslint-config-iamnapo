@@ -3,6 +3,7 @@ import test from "node:test";
 import { fileURLToPath } from "node:url";
 
 import { Linter } from "eslint";
+
 import eslintConfigIamnapo from "eslint-config-iamnapo";
 
 const config = eslintConfigIamnapo.configs.typescript;

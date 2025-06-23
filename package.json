@@ -37,7 +37,7 @@
 	],
 	"scripts": {
 		"lint": "eslint --cache",
-		"test": "pnpm run lint && node test/run.js"
+		"test": "pnpm lint && node test/run.js"
 	},
 	"dependencies": {
 		"@eslint/js": "^9.29.0",

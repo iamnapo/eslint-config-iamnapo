@@ -27,7 +27,7 @@ const config = (jsx = false) => [
 		rules: {
 			"@stylistic/brace-style": ["error", "1tbs", { allowSingleLine: true }],
 			"@stylistic/comma-spacing": "error",
-			"@stylistic/func-call-spacing": "error",
+			"@stylistic/function-call-spacing": "error",
 			"@stylistic/function-paren-newline": ["error", "consistent"],
 			"@stylistic/indent": ["error", "tab", { SwitchCase: 1 }],
 			"@stylistic/keyword-spacing": "error",
