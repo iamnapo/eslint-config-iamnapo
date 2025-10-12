@@ -9,7 +9,7 @@ import { configWithJsx as defaultConfig } from "./default.js";
 const config = [
 	eslintPluginReact.configs.flat.recommended,
 	eslintPluginReact.configs.flat["jsx-runtime"],
-	eslintPluginReactHooks.configs["recommended-latest"],
+	eslintPluginReactHooks.configs.flat["recommended-latest"],
 	eslintPluginJsxA11y.flatConfigs.recommended,
 	...defaultConfig,
 	{ languageOptions: { globals: globals.browser }, settings: { react: { version: "999.999.999" } } },
