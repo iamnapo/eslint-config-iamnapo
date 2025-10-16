@@ -17,15 +17,16 @@ npm i eslint-config-iamnapo -D
 Add to your `eslint.config.js` one of the available configs (`default`, `react`, `typescript`, `react-typescript`) like so:
 
 ```js
+import { defineConfig } from "eslint/config";
 import eslintConfigIamnapo from "eslint-config-iamnapo";
 
-const config = [
-	...eslintConfigIamnapo.configs.default.map((cfg) => ({
-		...cfg,
+const config = defineConfig([
+	{
 		files: [eslintConfigIamnapo.filePatterns.default],
-	})),
+		extends: [eslintConfigIamnapo.configs.default],
+	},
 	// your overrides
-];
+]);
 
 export default config;
 ```
