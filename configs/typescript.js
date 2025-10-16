@@ -16,7 +16,7 @@ const config = [
 	},
 	{
 		rules: {
-			"import-x/extensions": ["error", "ignorePackages", { ts: "never" }],
+			"import-x/extensions": ["error", "ignorePackages", { checkTypeImports: true }],
 			"import-x/no-unresolved": "off",
 			"no-unused-vars": "off",
 			"no-void": ["error", { allowAsStatement: true }],
