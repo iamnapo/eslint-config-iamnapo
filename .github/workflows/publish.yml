@@ -26,8 +26,6 @@ jobs:
 
       - name: 🚀 Release to npm
         run: pnpm publish --no-git-checks
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: ⎔ Setup node
         uses: actions/setup-node@v4
