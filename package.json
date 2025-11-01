@@ -1,6 +1,6 @@
 {
 	"name": "eslint-config-iamnapo",
-	"version": "41.0.0",
+	"version": "42.0.0",
 	"description": "ESLint shareable config for iamnapo’s coding style",
 	"keywords": [
 		"eslint",
