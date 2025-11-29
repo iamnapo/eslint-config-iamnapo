@@ -7,7 +7,7 @@ const config = [
 	...typescriptConfig,
 	{
 		rules: {
-			"import-x/extensions": ["error", "ignorePackages", { ts: "never", tsx: "never" }],
+			"import-x/extensions": ["error", { ignorePackages: true, fix: true, pattern: { ts: "never", tsx: "never" } }],
 			"react/jsx-filename-extension": ["error", { extensions: [".jsx", ".tsx"] }],
 		},
 	},

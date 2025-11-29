@@ -79,7 +79,7 @@ const config = (jsx = false) => [
 			"array-callback-return": ["error", { allowImplicit: true }],
 			"func-names": ["error", "never"],
 			"import-x/default": "off",
-			"import-x/extensions": ["error", { ignorePackages: true, pattern: { json: "always" } }],
+			"import-x/extensions": ["error", { ignorePackages: true, fix: true, pattern: { js: "always", json: "always" } }],
 			"import-x/namespace": "off",
 			"import-x/no-anonymous-default-export": "error",
 			"import-x/no-duplicates": ["error", { considerQueryString: true, "prefer-inline": true }],
