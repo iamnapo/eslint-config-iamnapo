@@ -77,6 +77,7 @@ const config = (jsx = false) => [
 			"@stylistic/space-infix-ops": "error",
 			"@stylistic/wrap-iife": ["error", "inside", { functionPrototypeMethods: true }],
 			"array-callback-return": ["error", { allowImplicit: true }],
+			eqeqeq: ["error", "always", { null: "ignore" }],
 			"func-names": ["error", "never"],
 			"import-x/default": "off",
 			"import-x/extensions": ["error", { ignorePackages: true, fix: true, pattern: { js: "always", json: "always" } }],
