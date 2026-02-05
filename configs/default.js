@@ -99,6 +99,7 @@ const config = (jsx = false) => [
 					pathGroups: [
 						{ pattern: "#assets/**", group: "internal" },
 						{ pattern: "#constants/**", group: "internal", position: "after" },
+						{ pattern: "#contexts/**", group: "internal", position: "after" },
 						{ pattern: "#components/**", group: "internal", position: "after" },
 						{ pattern: "#hooks/**", group: "internal", position: "after" },
 						{ pattern: "#styles/**", group: "internal", position: "after" },
