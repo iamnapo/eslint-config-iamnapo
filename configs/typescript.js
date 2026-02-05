@@ -18,7 +18,7 @@ const config = [
 		rules: {
 			"import-x/extensions": [
 				"error",
-				{ ignorePackages: true, fix: true, checkTypeImports: true, pattern: { ts: "never", json: "always" } },
+				{ ignorePackages: true, fix: true, checkTypeImports: true, pattern: { ts: "always", json: "always" } },
 			],
 			"import-x/no-named-as-default-member": "off",
 			"import-x/no-unresolved": "off",
@@ -31,6 +31,7 @@ const config = [
 			"@typescript-eslint/consistent-type-definitions": ["error", "type"],
 			"@typescript-eslint/consistent-type-imports": ["error", { fixStyle: "inline-type-imports" }],
 			"@typescript-eslint/no-import-type-side-effects": "error",
+			"@typescript-eslint/no-misused-promises": ["error", { checksVoidReturn: false }],
 			"@typescript-eslint/no-shadow": "error",
 			"@typescript-eslint/no-use-before-define": ["error", { functions: false }],
 			"@typescript-eslint/no-unused-vars": [
