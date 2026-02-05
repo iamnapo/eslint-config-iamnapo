@@ -16,10 +16,7 @@ const config = [
 	},
 	{
 		rules: {
-			"import-x/extensions": [
-				"error",
-				{ ignorePackages: true, fix: true, checkTypeImports: true, pattern: { ts: "always", json: "always" } },
-			],
+			"import-x/extensions": ["error", "ignorePackages", { fix: true }],
 			"import-x/no-named-as-default-member": "off",
 			"import-x/no-unresolved": "off",
 			"no-shadow": "off",
