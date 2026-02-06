@@ -80,7 +80,7 @@ const config = (jsx = false) => [
 			eqeqeq: ["error", "always", { null: "ignore" }],
 			"func-names": ["error", "never"],
 			"import-x/default": "off",
-			"import-x/extensions": ["error", { ignorePackages: true, fix: true, pattern: { js: "always", json: "always" } }],
+			"import-x/extensions": ["error", "ignorePackages", { fix: true, checkTypeImports: true }],
 			"import-x/namespace": "off",
 			"import-x/no-anonymous-default-export": "error",
 			"import-x/no-duplicates": ["error", { considerQueryString: true, "prefer-inline": true }],
