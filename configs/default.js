@@ -1,29 +1,30 @@
 import eslintJs from "@eslint/js";
 import eslintPluginStylistic from "@stylistic/eslint-plugin";
+import { defineConfig } from "eslint/config";
 import eslintPluginImportX from "eslint-plugin-import-x";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import globals from "globals";
 
-/** @type {(jsx?: boolean) => import("eslint").Linter.Config[]} */
-const config = (jsx = false) => [
-	eslintJs.configs.recommended,
-	eslintPluginImportX.flatConfigs.recommended,
-	eslintPluginUnicorn.configs.recommended,
-	eslintPluginStylistic.configs.customize({
-		arrowParens: true,
-		commaDangle: "always-multiline",
-		indent: "tab",
-		braceStyle: "1tbs",
-		quoteProps: "as-needed",
-		quotes: "double",
-		semi: true,
-		jsx,
-	}),
-	{
+const config = (jsx = false) =>
+	defineConfig({
+		name: "iamnapo/default",
+		extends: [
+			eslintJs.configs.recommended,
+			eslintPluginImportX.flatConfigs.recommended,
+			eslintPluginUnicorn.configs.recommended,
+			eslintPluginStylistic.configs.customize({
+				arrowParens: true,
+				commaDangle: "always-multiline",
+				indent: "tab",
+				braceStyle: "1tbs",
+				quoteProps: "as-needed",
+				quotes: "double",
+				semi: true,
+				jsx,
+			}),
+		],
 		linterOptions: { reportUnusedDisableDirectives: "error" },
 		languageOptions: { ecmaVersion: "latest", globals: globals.nodeBuiltin },
-	},
-	{
 		rules: {
 			"@stylistic/brace-style": ["error", "1tbs", { allowSingleLine: true }],
 			"@stylistic/comma-spacing": "error",
@@ -134,9 +135,8 @@ const config = (jsx = false) => [
 			"unicorn/prevent-abbreviations": "off",
 			"unicorn/prefer-import-meta-properties": "error",
 		},
-	},
-];
+	});
 
 export const configWithJsx = config(true);
 
-export default config().map((cfg) => ({ ...cfg, name: "iamnapo/default" }));
+export default config();
