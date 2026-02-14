@@ -19,10 +19,6 @@ const config = defineConfig({
 	settings: { react: { version: "999.999.999" } },
 	rules: {
 		"@stylistic/jsx-curly-brace-presence": ["error", { props: "never", children: "always" }],
-		"@stylistic/jsx-sort-props": [
-			"error",
-			{ callbacksLast: true, shorthandFirst: true, noSortAlphabetically: true, reservedFirst: true },
-		],
 		"react/display-name": "off",
 		"react/hook-use-state": "error",
 		"react/jsx-key": [
@@ -31,6 +27,10 @@ const config = defineConfig({
 		],
 		"react/jsx-no-duplicate-props": ["error", { ignoreCase: false }],
 		"react/jsx-no-useless-fragment": "error",
+		"react/jsx-sort-props": [
+			"error",
+			{ callbacksLast: true, shorthandFirst: true, noSortAlphabetically: true, reservedFirst: true },
+		],
 		"react/no-unknown-property": "error",
 		"react/no-unstable-nested-components": ["error", { allowAsProps: true }],
 		"react/require-default-props": ["error", { forbidDefaultForRequired: true, ignoreFunctionalComponents: true }],
