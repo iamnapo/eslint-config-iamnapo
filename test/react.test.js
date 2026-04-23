@@ -9,8 +9,8 @@ import eslintConfigIamnapo from "eslint-config-iamnapo";
 const config = eslintConfigIamnapo.configs.react;
 const filePattern = eslintConfigIamnapo.filePatterns.react;
 
-test("load config in eslint to validate all rule syntax is correct", async () => {
-	const linter = new Linter({ configType: "flat" });
+test("load config in eslint to validate all rule syntax is correct", () => {
+	const linter = new Linter();
 	const code = `
 	import { createRoot } from "react-dom/client";
 
@@ -18,7 +18,7 @@ test("load config in eslint to validate all rule syntax is correct", async () =>
 	const root = createRoot(document.querySelector("#root"));
 	root.render(element);
 	`.replaceAll("\t", "");
-	const errorCount = await linter.verify(
+	const errorCount = linter.verify(
 		code,
 		[...config.map((cfg) => ({ ...cfg, files: [filePattern] })), { rules: { "import-x/no-unresolved": "off" } }],
 		fileURLToPath(new URL("test.jsx", import.meta.url)),
