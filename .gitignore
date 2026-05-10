@@ -58,3 +58,4 @@ typings/
 .env
 
 pnpm-lock.yaml
+pnpm-workspace.yaml
