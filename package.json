@@ -49,7 +49,7 @@
 		"eslint-plugin-react-hooks": "^7.1.1",
 		"eslint-plugin-unicorn": "^64.0.0",
 		"globals": "^17.6.0",
-		"typescript-eslint": "^8.59.2"
+		"typescript-eslint": "^8.59.3"
 	},
 	"devDependencies": {
 		"eslint": "^9.39.4",
@@ -64,7 +64,12 @@
 			"optional": true
 		}
 	},
-	"packageManager": "pnpm@11.0.9+sha512.34ce82e6780233cf9cad8685029a8f81d2e06196c5a9bad98879f7424940c6817c4e4524fb7d38b8553ceed48b9758b8ebaf1abd3600c232c4c8cf7366086f38",
+	"devEngines": {
+		"packageManager": {
+			"name": "pnpm",
+			"version": ">=11"
+		}
+	},
 	"engines": {
 		"node": ">=24"
 	},
