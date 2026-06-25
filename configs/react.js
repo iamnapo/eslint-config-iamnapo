@@ -1,41 +1,49 @@
+import eslintReact from "@eslint-react/eslint-plugin";
 import { defineConfig } from "eslint/config";
-import eslintPluginJsxA11y from "eslint-plugin-jsx-a11y";
-import eslintPluginReact from "eslint-plugin-react";
+import eslintPluginJsxA11y from "eslint-plugin-jsx-a11y-x";
+import eslintPluginPerfectionist from "eslint-plugin-perfectionist";
 import eslintPluginReactHooks from "eslint-plugin-react-hooks";
 import globals from "globals";
 
 import { configWithJsx as defaultConfig } from "./default.js";
 
-const config = defineConfig({
-	name: "iamnapo/react",
-	extends: [
-		eslintPluginReact.configs.flat.recommended,
-		eslintPluginReact.configs.flat["jsx-runtime"],
-		eslintPluginReactHooks.configs.flat["recommended-latest"],
-		eslintPluginJsxA11y.flatConfigs.recommended,
-		defaultConfig,
-	],
-	languageOptions: { globals: globals.browser },
-	settings: { react: { version: "999.999.999" } },
-	rules: {
-		"@stylistic/jsx-curly-brace-presence": ["error", { props: "never", children: "always" }],
-		"react/display-name": "off",
-		"react/hook-use-state": "error",
-		"react/jsx-key": [
-			"error",
-			{ checkFragmentShorthand: true, checkKeyMustBeforeSpread: true, warnOnDuplicates: true },
+const config = (isTypeChecked = false) =>
+	defineConfig({
+		name: "iamnapo/react",
+		extends: [
+			isTypeChecked ? eslintReact.configs["recommended-type-checked"] : eslintReact.configs.recommended,
+			eslintPluginReactHooks.configs.flat["recommended-latest"],
+			eslintReact.configs["disable-conflict-eslint-plugin-react-hooks"],
+			eslintPluginJsxA11y.configs.recommended,
+			defaultConfig,
 		],
-		"react/jsx-no-duplicate-props": ["error", { ignoreCase: false }],
-		"react/jsx-no-useless-fragment": "error",
-		"react/jsx-sort-props": [
-			"error",
-			{ callbacksLast: true, shorthandFirst: true, noSortAlphabetically: true, reservedFirst: true },
-		],
-		"react/no-unknown-property": "error",
-		"react/no-unstable-nested-components": ["error", { allowAsProps: true }],
-		"react/require-default-props": ["error", { forbidDefaultForRequired: true, ignoreFunctionalComponents: true }],
-		"unicorn/filename-case": ["error", { cases: { kebabCase: true, pascalCase: true } }],
-	},
-});
+		plugins: { perfectionist: eslintPluginPerfectionist },
+		languageOptions: {
+			globals: globals.browser,
+			parserOptions: { ecmaFeatures: { jsx: true } },
+		},
+		rules: {
+			"@stylistic/jsx-curly-brace-presence": ["error", { props: "never", children: "always" }],
+			"perfectionist/sort-jsx-props": [
+				"error",
+				{
+					type: "unsorted",
+					groups: ["reserved", "shorthand", "unknown", "callback"],
+					customGroups: [
+						{ groupName: "reserved", elementNamePattern: "^(key|ref)$" },
+						{ groupName: "shorthand", selector: "prop", modifiers: ["shorthand"] },
+						{ groupName: "callback", elementNamePattern: "^on[A-Z]" },
+					],
+				},
+			],
+			"@eslint-react/dom-no-unknown-property": "error",
+			"@eslint-react/jsx-no-useless-fragment": "error",
+			"@eslint-react/no-duplicate-key": "error",
+			"@eslint-react/use-state": "error",
+			"unicorn/filename-case": ["error", { cases: { kebabCase: true, pascalCase: true } }],
+		},
+	});
 
-export default config;
+export const configTypeChecked = config(true);
+
+export default config();

@@ -13,7 +13,7 @@ test("load config in eslint to validate all rule syntax is correct", () => {
 	const linter = new Linter();
 	const code = `
 	const foo = 1;
-	const bar = () => {};
+	const bar = (a) => a;
 	bar(foo);
 	`.replaceAll("\t", "");
 	const errorCount = linter.verify(

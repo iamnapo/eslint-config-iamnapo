@@ -5,7 +5,7 @@ import eslintPluginImportX from "eslint-plugin-import-x";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import globals from "globals";
 
-const config = (jsx = false) =>
+const config = (isJsx = false) =>
 	defineConfig({
 		name: "iamnapo/default",
 		extends: [
@@ -20,7 +20,7 @@ const config = (jsx = false) =>
 				quoteProps: "as-needed",
 				quotes: "double",
 				semi: true,
-				jsx,
+				jsx: isJsx,
 			}),
 		],
 		linterOptions: { reportUnusedDisableDirectives: "error" },
@@ -128,6 +128,7 @@ const config = (jsx = false) =>
 			"prefer-template": "error",
 			"require-await": "error",
 			"unicorn/consistent-destructuring": "error",
+			"unicorn/max-nested-calls": "off",
 			"unicorn/no-array-callback-reference": "off",
 			"unicorn/no-nested-ternary": "off",
 			"unicorn/no-null": "off",
