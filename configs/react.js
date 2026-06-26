@@ -23,6 +23,11 @@ const config = (isTypeChecked = false) =>
 			parserOptions: { ecmaFeatures: { jsx: true } },
 		},
 		rules: {
+			"@eslint-react/dom-no-unknown-property": "error",
+			"@eslint-react/jsx-no-useless-fragment": "error",
+			"@eslint-react/no-array-index-key": "off",
+			"@eslint-react/no-duplicate-key": "error",
+			"@eslint-react/use-state": "error",
 			"@stylistic/jsx-curly-brace-presence": ["error", { props: "never", children: "always" }],
 			"perfectionist/sort-jsx-props": [
 				"error",
@@ -36,10 +41,6 @@ const config = (isTypeChecked = false) =>
 					],
 				},
 			],
-			"@eslint-react/dom-no-unknown-property": "error",
-			"@eslint-react/jsx-no-useless-fragment": "error",
-			"@eslint-react/no-duplicate-key": "error",
-			"@eslint-react/use-state": "error",
 			"unicorn/filename-case": ["error", { cases: { kebabCase: true, pascalCase: true } }],
 		},
 	});

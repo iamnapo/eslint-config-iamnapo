@@ -48,7 +48,7 @@
 		"eslint-plugin-jsx-a11y-x": "^0.2.0",
 		"eslint-plugin-perfectionist": "^5.9.1",
 		"eslint-plugin-react-hooks": "^7.1.1",
-		"eslint-plugin-unicorn": "^67.0.0",
+		"eslint-plugin-unicorn": "^68.0.0",
 		"globals": "^17.6.0",
 		"typescript-eslint": "^8.61.1"
 	},
