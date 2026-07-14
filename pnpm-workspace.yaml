@@ -1,4 +1,2 @@
 allowBuilds:
   unrs-resolver: true
-configDependencies:
-  '@pnpm/pacquet': 0.11.12
