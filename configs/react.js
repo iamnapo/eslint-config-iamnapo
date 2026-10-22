@@ -47,4 +47,6 @@ const config = (isTypeChecked = false) =>
 
 export const configTypeChecked = config(true);
 
-export default config();
+const reactConfig = config();
+
+export default reactConfig;

@@ -150,4 +150,6 @@ const config = (isJsx = false) =>
 
 export const configWithJsx = config(true);
 
-export default config();
+const defaultConfig = config();
+
+export default defaultConfig;

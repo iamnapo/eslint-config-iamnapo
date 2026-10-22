@@ -17,7 +17,7 @@ test("load config in eslint to validate all rule syntax is correct", () => {
 	const element = <h1>{"Hello, world"}</h1>;
 	const root = createRoot(document.querySelector("#root"));
 	root.render(element);
-	`.replaceAll("\t", "");
+	`.replaceAll("\t", "").trimStart();
 	const errorCount = linter.verify(
 		code,
 		[...config.map((cfg) => ({ ...cfg, files: [filePattern] })), { rules: { "import-x/no-unresolved": "off" } }],

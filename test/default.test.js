@@ -15,7 +15,7 @@ test("load config in eslint to validate all rule syntax is correct", () => {
 	const foo = 1;
 	const bar = (a) => a;
 	bar(foo);
-	`.replaceAll("\t", "");
+	`.replaceAll("\t", "").trimStart();
 	const errorCount = linter.verify(
 		code,
 		config.map((cfg) => ({ ...cfg, files: [filePattern] })),
