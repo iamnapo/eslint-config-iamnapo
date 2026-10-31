@@ -1,6 +1,6 @@
 {
 	"name": "eslint-config-iamnapo",
-	"version": "45.0.0",
+	"version": "46.0.0",
 	"description": "ESLint shareable config for iamnapo’s coding style",
 	"license": "MIT",
 	"repository": "github:iamnapo/eslint-config-iamnapo",
